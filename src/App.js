@@ -6,12 +6,11 @@ import ForumList from "./components/ForumList";
 import Register from "./components/Register";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Header />
         <main>
           {/* The main content is determined using the Router */}
