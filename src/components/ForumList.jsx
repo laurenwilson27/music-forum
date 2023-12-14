@@ -2,10 +2,7 @@ import useGet from "../hooks/useGet";
 import { Link } from "react-router-dom";
 
 const ForumList = () => {
-  const { data, isLoading, error } = useGet("http://localhost:7000/forums");
-  // const { genreData, genreIsLoading, genreError } = useGet(
-  //   "http://localhost:7000/genres"
-  // );
+  const { data, isLoading, error } = useGet("http://localhost:7000/genres");
 
   // Show placeholders if loading is in progress or has failed
   if (isLoading) return <div>Loading forum listing...</div>;
@@ -20,10 +17,15 @@ const ForumList = () => {
 
   return (
     <div>
-      {data.map((forum) => {
+      {data.map((genre) => {
         return (
           <div>
-            <Link to={`forum/${forum.id}`}>{forum.name}</Link>
+            Genre: {genre.name}
+            <br />
+            {genre.forums.map((forum) => {
+              return <Link to={`forum/${forum.id}`}>{forum.name}</Link>;
+            })}
+            <hr />
           </div>
         );
       })}
