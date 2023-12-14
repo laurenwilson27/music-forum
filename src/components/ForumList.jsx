@@ -19,11 +19,16 @@ const ForumList = () => {
     <div>
       {data.map((genre) => {
         return (
-          <div>
+          <div key={genre.id}>
             Genre: {genre.name}
             <br />
             {genre.forums.map((forum) => {
-              return <Link to={`forum/${forum.id}`}>{forum.name}</Link>;
+              return (
+                <Link to={`forum/${forum.id}`} key={forum.id}>
+                  {forum.name}
+                  <br />
+                </Link>
+              );
             })}
             <hr />
           </div>

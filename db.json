@@ -9,7 +9,10 @@
     {
       "id": 2,
       "name": "Rock",
-      "forums": [{ "id": 2, "name": "Rock Discussion" }]
+      "forums": [
+        { "id": 2, "name": "Rock Discussion" },
+        { "id": 6, "name": "Rock Climbing" }
+      ]
     },
     {
       "id": 3,
@@ -27,7 +30,26 @@
       "forums": [{ "id": 5, "name": "Alternative Discussion" }]
     }
   ],
-  "topics": [{ "id": 1, "name": "Hello World", "forum": 1, "author": 1 }],
+  "topics": [
+    {
+      "id": 1,
+      "title": "The first topic in Metal Discussion",
+      "forum": 1,
+      "author": 1
+    },
+    {
+      "id": 2,
+      "title": "Anoter topic in Metal Discussion. Check Folk next!",
+      "forum": 1,
+      "author": 1
+    },
+    {
+      "id": 3,
+      "title": "This topic is in Folk Discussion",
+      "forum": 4,
+      "author": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,
