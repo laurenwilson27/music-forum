@@ -1,20 +1,77 @@
 {
   "users": [],
   "genres": [
-    { "id": 1, "name": "Metal" },
-    { "id": 2, "name": "Rock" },
-    { "id": 3, "name": "Punk" },
-    { "id": 4, "name": "Folk" },
-    { "id": 5, "name": "Alternative" }
+    {
+      "id": 1,
+      "name": "Metal"
+    },
+    {
+      "id": 2,
+      "name": "Rock"
+    },
+    {
+      "id": 3,
+      "name": "Punk"
+    },
+    {
+      "id": 4,
+      "name": "Folk"
+    },
+    {
+      "id": 5,
+      "name": "Alternative"
+    }
   ],
-  "forums": [{ "id": 1, "name": "Metal Discussion", "genre": 1 }],
-  "topics": [{ "id": 1, "name": "Hello World", "forum": 1, "author": 1 }],
+  "forums": [
+    {
+      "id": 1,
+      "name": "Metal Discussion",
+      "genre": 1
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "name": "Hello World",
+      "forum": 1,
+      "author": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,
       "topic": 1,
       "text": "This is the Hello World topic",
-      "author": 1
+      "author": 1,
+      "likes": 5
+    },
+    {
+      "text": "sfhsefhsoe",
+      "id": 2,
+      "likes": 2
+    },
+    {
+      "text": "Hi",
+      "id": 3,
+      "likes": 0
+    },
+    {
+      "text": "Hello hello",
+      "id": 4,
+      "likes": 20
+    },
+    {
+      "text": "Hi hi",
+      "id": 5,
+      "likes": 10
+    },
+    {
+      "text": "grgw",
+      "id": 6
+    },
+    {
+      "text": "sfsfd",
+      "id": 7
     }
   ]
 }

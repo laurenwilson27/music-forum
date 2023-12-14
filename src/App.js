@@ -5,6 +5,9 @@ import TopicList from "./components/TopicList";
 import ForumList from "./components/ForumList";
 import Register from "./components/Register";
 
+import CommentsPage from "./components/CommentsPage";
+import { Link } from "react-router-dom";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -20,6 +23,8 @@ function App() {
             <Route path="/forum/:forumID" element={<TopicList />} />
             <Route path="/topic/:topicID" />
             <Route path="/" element={<ForumList />} />
+
+            <Route path="/commentspage" element={<CommentsPage />} />
           </Routes>
         </main>
       </div>
