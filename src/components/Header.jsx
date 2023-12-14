@@ -1,4 +1,4 @@
-// Note - this element currently just displays a link to the registration page to test the Router
+// Note - this component currently just displays a link to the registration page to test the Router
 import { Link } from "react-router-dom";
 
 const Header = () => {

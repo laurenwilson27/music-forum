@@ -1,14 +1,55 @@
 {
   "users": [],
   "genres": [
-    { "id": 1, "name": "Metal" },
-    { "id": 2, "name": "Rock" },
-    { "id": 3, "name": "Punk" },
-    { "id": 4, "name": "Folk" },
-    { "id": 5, "name": "Alternative" }
+    {
+      "id": 1,
+      "name": "Metal",
+      "forums": [{ "id": 1, "name": "Metal Discussion" }]
+    },
+    {
+      "id": 2,
+      "name": "Rock",
+      "forums": [
+        { "id": 2, "name": "Rock Discussion" },
+        { "id": 6, "name": "Rock Climbing" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Punk",
+      "forums": [{ "id": 3, "name": "Punk Discussion" }]
+    },
+    {
+      "id": 4,
+      "name": "Folk",
+      "forums": [{ "id": 4, "name": "Folk Discussion" }]
+    },
+    {
+      "id": 5,
+      "name": "Alternative",
+      "forums": [{ "id": 5, "name": "Alternative Discussion" }]
+    }
   ],
-  "forums": [{ "id": 1, "name": "Metal Discussion", "genre": 1 }],
-  "topics": [{ "id": 1, "name": "Hello World", "forum": 1, "author": 1 }],
+  "topics": [
+    {
+      "id": 1,
+      "title": "The first topic in Metal Discussion",
+      "forum": 1,
+      "author": 1
+    },
+    {
+      "id": 2,
+      "title": "Anoter topic in Metal Discussion. Check Folk next!",
+      "forum": 1,
+      "author": 1
+    },
+    {
+      "id": 3,
+      "title": "This topic is in Folk Discussion",
+      "forum": 4,
+      "author": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,
