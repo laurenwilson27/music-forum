@@ -4,30 +4,56 @@
     {
       "id": 1,
       "name": "Metal",
-      "forums": [{ "id": 1, "name": "Metal Discussion" }]
+      "forums": [
+        {
+          "id": 1,
+          "name": "Metal Discussion"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Rock",
       "forums": [
-        { "id": 2, "name": "Rock Discussion" },
-        { "id": 6, "name": "Rock Climbing" }
+        {
+          "id": 2,
+          "name": "Rock Discussion"
+        },
+        {
+          "id": 6,
+          "name": "Rock Climbing"
+        }
       ]
     },
     {
       "id": 3,
       "name": "Punk",
-      "forums": [{ "id": 3, "name": "Punk Discussion" }]
+      "forums": [
+        {
+          "id": 3,
+          "name": "Punk Discussion"
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Folk",
-      "forums": [{ "id": 4, "name": "Folk Discussion" }]
+      "forums": [
+        {
+          "id": 4,
+          "name": "Folk Discussion"
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Alternative",
-      "forums": [{ "id": 5, "name": "Alternative Discussion" }]
+      "forums": [
+        {
+          "id": 5,
+          "name": "Alternative Discussion"
+        }
+      ]
     }
   ],
   "topics": [
@@ -53,15 +79,25 @@
   "comments": [
     {
       "id": 1,
-      "topic": 1,
+      "topicId": 1,
       "text": "This is a comment in the first Metal Discussion topic.",
       "author": 1
     },
     {
       "id": 2,
-      "topic": 1,
+      "topicId": 1,
       "text": "This is an enthusiastic response!",
       "author": 1
+    },
+    {
+      "topicId": 1,
+      "text": "A third comment",
+      "id": 3
+    },
+    {
+      "topicId": 2,
+      "text": "First comment but in anoter [sic] topic.",
+      "id": 4
     }
   ]
 }

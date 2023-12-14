@@ -25,10 +25,8 @@ const TopicList = () => {
       <ul>
         {data.map((topic) => {
           return (
-            <li>
-              <Link to={`/topic/${topic.id}`} key={topic.id}>
-                {topic.title}
-              </Link>
+            <li key={topic.id}>
+              <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
             </li>
           );
         })}

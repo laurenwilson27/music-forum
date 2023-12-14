@@ -5,3 +5,10 @@
 .comment {
   border: 2px solid #eee;
 }
+
+.add-comment {
+  margin: 12px;
+  padding: 8px;
+  border: 1px dashed #444;
+  min-height: 48px;
+}
