@@ -17,11 +17,13 @@ const ForumList = () => {
 
   return (
     <div>
+      {/* The API data contains a list of genres to iterate through */}
       {data.map((genre) => {
         return (
           <div key={genre.id}>
             Genre: {genre.name}
             <br />
+            {/* Each genre also contains a list of forums to list within that genre */}
             {genre.forums.map((forum) => {
               return (
                 <Link to={`forum/${forum.id}`} key={forum.id}>

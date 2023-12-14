@@ -1,9 +1,10 @@
 import useGet from "../hooks/useGet";
 import { Link, useParams } from "react-router-dom";
 
-const TopicList = (forumID) => {
+const TopicList = () => {
+  // The Router in App.js passes a forumID parameter based on the page URL
+  // The forumID parameter is used to apply a filter to the json-server request
   const params = useParams();
-  console.log(params);
   const { data, isLoading, error } = useGet(
     `http://localhost:7000/topics?forum=${params.forumID}`
   );
