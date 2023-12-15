@@ -25,15 +25,27 @@ const TopicView = () => {
 
   // Function to add a comment; passed to the comment form
   const addComment = async (comment) => {
+    // POST the new comment to the comments in the DB
     const res = await fetch("http://localhost:7000/comments", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ topicId: Number(params.topicID), text: comment }),
     });
 
-    //The response is the new comment, append it to the existing comments
+    // Additionally, use PATCH to update the 'count' value for the topic
+    await fetch(`http://localhost:7000/topics/${params.topicID}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ count: data.count + 1 }),
+    });
+
+    //The response is the new comment, append it to the existing comments and update comment count
     const resData = await res.json();
-    setData({ ...data, comments: [...data.comments, resData] });
+    setData({
+      ...data,
+      count: data.count + 1,
+      comments: [...data.comments, resData],
+    });
   };
 
   return (

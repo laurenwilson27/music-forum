@@ -6,7 +6,7 @@ const AddCommentForm = ({ onAdd }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!text) {
-      alert("Please add a task");
+      alert("Please add comment text before submitting.");
       return;
     }
 

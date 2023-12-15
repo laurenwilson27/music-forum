@@ -61,19 +61,22 @@
       "id": 1,
       "title": "The first topic in Metal Discussion",
       "forum": 1,
-      "author": 1
+      "author": 1,
+      "count": 3
     },
     {
       "id": 2,
       "title": "Anoter topic in Metal Discussion. Check Folk next!",
       "forum": 1,
-      "author": 1
+      "author": 1,
+      "count": 1
     },
     {
       "id": 3,
       "title": "This topic is in Folk Discussion",
       "forum": 4,
-      "author": 1
+      "author": 1,
+      "count": 3
     }
   ],
   "comments": [
@@ -98,6 +101,21 @@
       "topicId": 2,
       "text": "First comment but in anoter [sic] topic.",
       "id": 4
+    },
+    {
+      "topicId": 3,
+      "text": "Here's some words",
+      "id": 5
+    },
+    {
+      "topicId": 3,
+      "text": "Some more words for good measure",
+      "id": 6
+    },
+    {
+      "topicId": 3,
+      "text": "A third one",
+      "id": 7
     }
   ]
 }

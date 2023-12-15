@@ -22,15 +22,24 @@ const TopicList = () => {
 
   return (
     <div>
-      <ul>
+      <table>
+        <thead>
+          <tr>
+            <td>Title</td>
+            <td>Comments</td>
+          </tr>
+        </thead>
         {data.map((topic) => {
           return (
-            <li key={topic.id}>
-              <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
-            </li>
+            <tr key={topic.id}>
+              <td>
+                <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
+              </td>
+              <td>{topic.count}</td>
+            </tr>
           );
         })}
-      </ul>
+      </table>
     </div>
   );
 };
