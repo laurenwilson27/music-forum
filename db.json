@@ -3,57 +3,61 @@
   "genres": [
     {
       "id": 1,
-      "name": "Metal",
-      "forums": [
-        {
-          "id": 1,
-          "name": "Metal Discussion"
-        }
-      ]
+      "name": "Metal"
     },
     {
       "id": 2,
-      "name": "Rock",
-      "forums": [
-        {
-          "id": 2,
-          "name": "Rock Discussion"
-        },
-        {
-          "id": 6,
-          "name": "Rock Climbing"
-        }
-      ]
+      "name": "Rock"
     },
     {
       "id": 3,
-      "name": "Punk",
-      "forums": [
-        {
-          "id": 3,
-          "name": "Punk Discussion"
-        }
-      ]
+      "name": "Punk"
     },
     {
       "id": 4,
-      "name": "Folk",
-      "forums": [
-        {
-          "id": 4,
-          "name": "Folk Discussion"
-        }
-      ]
+      "name": "Folk"
     },
     {
       "id": 5,
-      "name": "Alternative",
-      "forums": [
-        {
-          "id": 5,
-          "name": "Alternative Discussion"
-        }
-      ]
+      "name": "Alternative"
+    }
+  ],
+  "forums": [
+    {
+      "id": 1,
+      "genreId": 1,
+      "name": "Metal Discussion",
+      "count": 2
+    },
+    {
+      "id": 2,
+      "genreId": 2,
+      "name": "Rock Discussion",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "genreId": 3,
+      "name": "Punk Discussion",
+      "count": 0
+    },
+    {
+      "id": 4,
+      "genreId": 4,
+      "name": "Folk Discussion",
+      "count": 1
+    },
+    {
+      "id": 5,
+      "genreId": 5,
+      "name": "Alternative Discussion",
+      "count": 0
+    },
+    {
+      "id": 6,
+      "genreId": 2,
+      "name": "Rock Climbing",
+      "count": 0
     }
   ],
   "topics": [

@@ -29,16 +29,18 @@ const TopicList = () => {
             <td>Comments</td>
           </tr>
         </thead>
-        {data.map((topic) => {
-          return (
-            <tr key={topic.id}>
-              <td>
-                <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
-              </td>
-              <td>{topic.count}</td>
-            </tr>
-          );
-        })}
+        <tbody>
+          {data.map((topic) => {
+            return (
+              <tr key={topic.id}>
+                <td>
+                  <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
+                </td>
+                <td>{topic.count}</td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </div>
   );
