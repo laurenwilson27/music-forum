@@ -9,8 +9,8 @@ const AddComments = ({ onAdd }) => {
       alert("Please add a task");
       return;
     }
-
-    onAdd({ text });
+    const likes = 0;
+    onAdd({ text, likes });
 
     setText("");
   };

@@ -39,39 +39,14 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "topic": 1,
-      "text": "This is the Hello World topic",
-      "author": 1,
-      "likes": 5
+      "text": "Comment 1",
+      "likes": 12,
+      "id": 1
     },
     {
-      "text": "sfhsefhsoe",
-      "id": 2,
-      "likes": 2
-    },
-    {
-      "text": "Hi",
-      "id": 3,
-      "likes": 0
-    },
-    {
-      "text": "Hello hello",
-      "id": 4,
-      "likes": 20
-    },
-    {
-      "text": "Hi hi",
-      "id": 5,
-      "likes": 10
-    },
-    {
-      "text": "grgw",
-      "id": 6
-    },
-    {
-      "text": "sfsfd",
-      "id": 7
+      "text": "comment changed",
+      "likes": 15,
+      "id": 2
     }
   ]
 }
