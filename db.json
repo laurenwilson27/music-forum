@@ -3,59 +3,150 @@
   "genres": [
     {
       "id": 1,
-      "name": "Metal",
-      "forums": [{ "id": 1, "name": "Metal Discussion" }]
+      "name": "Metal"
     },
     {
       "id": 2,
-      "name": "Rock",
-      "forums": [
-        { "id": 2, "name": "Rock Discussion" },
-        { "id": 6, "name": "Rock Climbing" }
-      ]
+      "name": "Rock"
     },
     {
       "id": 3,
-      "name": "Punk",
-      "forums": [{ "id": 3, "name": "Punk Discussion" }]
+      "name": "Punk"
     },
     {
       "id": 4,
-      "name": "Folk",
-      "forums": [{ "id": 4, "name": "Folk Discussion" }]
+      "name": "Folk"
     },
     {
       "id": 5,
-      "name": "Alternative",
-      "forums": [{ "id": 5, "name": "Alternative Discussion" }]
+      "name": "Alternative"
+    }
+  ],
+  "forums": [
+    {
+      "id": 1,
+      "genreId": 1,
+      "name": "Metal Discussion",
+      "count": 2
+    },
+    {
+      "id": 2,
+      "genreId": 2,
+      "name": "Rock Discussion",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "genreId": 3,
+      "name": "Punk Discussion",
+      "count": 2
+    },
+    {
+      "id": 4,
+      "genreId": 4,
+      "name": "Folk Discussion",
+      "count": 1
+    },
+    {
+      "id": 5,
+      "genreId": 5,
+      "name": "Alternative Discussion",
+      "count": 0
+    },
+    {
+      "id": 6,
+      "genreId": 2,
+      "name": "Rock Climbing",
+      "count": 0
     }
   ],
   "topics": [
     {
       "id": 1,
       "title": "The first topic in Metal Discussion",
-      "forum": 1,
-      "author": 1
+      "forumId": 1,
+      "author": 1,
+      "count": 3
     },
     {
       "id": 2,
       "title": "Anoter topic in Metal Discussion. Check Folk next!",
-      "forum": 1,
-      "author": 1
+      "forumId": 1,
+      "author": 1,
+      "count": 1
     },
     {
       "id": 3,
       "title": "This topic is in Folk Discussion",
-      "forum": 4,
-      "author": 1
+      "forumId": 4,
+      "author": 1,
+      "count": 3
+    },
+    {
+      "title": "Wow it's a new Punk topic",
+      "forumId": 3,
+      "count": 1,
+      "id": 4
+    },
+    {
+      "title": "A second punk topic?",
+      "forumId": 3,
+      "count": 2,
+      "id": 5
     }
   ],
   "comments": [
     {
       "id": 1,
-      "topic": 1,
-      "text": "This is the Hello World topic",
+      "topicId": 1,
+      "text": "This is a comment in the first Metal Discussion topic.",
       "author": 1
+    },
+    {
+      "id": 2,
+      "topicId": 1,
+      "text": "This is an enthusiastic response!",
+      "author": 1
+    },
+    {
+      "topicId": 1,
+      "text": "A third comment",
+      "id": 3
+    },
+    {
+      "topicId": 2,
+      "text": "First comment but in anoter [sic] topic.",
+      "id": 4
+    },
+    {
+      "topicId": 3,
+      "text": "Here's some words",
+      "id": 5
+    },
+    {
+      "topicId": 3,
+      "text": "Some more words for good measure",
+      "id": 6
+    },
+    {
+      "topicId": 3,
+      "text": "A third one",
+      "id": 7
+    },
+    {
+      "topicId": 4,
+      "text": "Look at that!",
+      "id": 8
+    },
+    {
+      "topicId": 5,
+      "text": "Yup something like that",
+      "id": 9
+    },
+    {
+      "topicId": 5,
+      "text": "(Second attempt but here goes!)",
+      "id": 10
     }
   ]
 }

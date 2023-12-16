@@ -23,7 +23,8 @@ const useGet = (url) => {
     getData();
   }, [url]);
 
-  return { data, isLoading, error };
+  // Note that the setData hook is returned
+  return { data, isLoading, error, setData };
 };
 
 export default useGet;
