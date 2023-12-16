@@ -40,13 +40,23 @@
   "comments": [
     {
       "text": "Comment 1",
-      "likes": 12,
+      "likes": 18,
       "id": 1
     },
     {
       "text": "comment changed",
-      "likes": 15,
+      "likes": 16,
       "id": 2
+    },
+    {
+      "text": "Hello",
+      "likes": 2,
+      "id": 3
+    },
+    {
+      "text": "Hello hello hi",
+      "likes": 3,
+      "id": 4
     }
   ]
 }

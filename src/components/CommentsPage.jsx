@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import Comments from "./Comments";
 import AddComments from "./AddComments";
 import CommentButton from "./CommentButton";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Like from "./Like";
 
 const CommentsPage = () => {
   const [showAddComment, setShowAddComment] = useState(false);
@@ -28,15 +26,7 @@ const CommentsPage = () => {
     return data;
   };
 
-  // const fetchComment = async (id) => {
-  //   console.log("fetchComment: " + id);
-  //   const res = await fetch(`http://localhost:7000/comments/${id}`);
-  //   const data = await res.json();
-  //   return data;
-  // };
-
   const addComment = async (comment) => {
-    console.log(comment);
     const res = await fetch("http://localhost:7000/comments", {
       method: "POST",
       headers: { "Content-type": "application/json" },
@@ -57,9 +47,6 @@ const CommentsPage = () => {
       {comments.length > 0 ? (
         <div>
           <Comments comments={comments} />
-          {/* {comments.map((comment) => (
-            <Like key={comment.id} commentId={comment.id} />
-          ))} */}
         </div>
       ) : (
         "No comments yet"
