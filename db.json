@@ -39,7 +39,7 @@
       "id": 3,
       "genreId": 3,
       "name": "Punk Discussion",
-      "count": 0
+      "count": 2
     },
     {
       "id": 4,
@@ -64,23 +64,35 @@
     {
       "id": 1,
       "title": "The first topic in Metal Discussion",
-      "forum": 1,
+      "forumId": 1,
       "author": 1,
       "count": 3
     },
     {
       "id": 2,
       "title": "Anoter topic in Metal Discussion. Check Folk next!",
-      "forum": 1,
+      "forumId": 1,
       "author": 1,
       "count": 1
     },
     {
       "id": 3,
       "title": "This topic is in Folk Discussion",
-      "forum": 4,
+      "forumId": 4,
       "author": 1,
       "count": 3
+    },
+    {
+      "title": "Wow it's a new Punk topic",
+      "forumId": 3,
+      "count": 1,
+      "id": 4
+    },
+    {
+      "title": "A second punk topic?",
+      "forumId": 3,
+      "count": 2,
+      "id": 5
     }
   ],
   "comments": [
@@ -120,6 +132,21 @@
       "topicId": 3,
       "text": "A third one",
       "id": 7
+    },
+    {
+      "topicId": 4,
+      "text": "Look at that!",
+      "id": 8
+    },
+    {
+      "topicId": 5,
+      "text": "Yup something like that",
+      "id": 9
+    },
+    {
+      "topicId": 5,
+      "text": "(Second attempt but here goes!)",
+      "id": 10
     }
   ]
 }
