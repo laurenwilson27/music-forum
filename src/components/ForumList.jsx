@@ -28,7 +28,6 @@ const ForumList = () => {
           <tr>
             <td>Forum</td>
             <td>Topics</td>
-            <td>Last Update</td>
           </tr>
         </thead>
         <tbody>
@@ -50,7 +49,6 @@ const ForumList = () => {
                         </Link>
                       </td>
                       <td>{forum.count}</td>
-                      <td>{moment(forum.timestamp).format("LLLL")}</td>
                     </tr>
                   );
                 })}
