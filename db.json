@@ -27,7 +27,8 @@
       "id": 1,
       "genreId": 1,
       "name": "Metal Discussion",
-      "count": 2
+      "count": 3,
+      "timestamp": 1702776085000
     },
     {
       "id": 2,
@@ -65,8 +66,9 @@
       "id": 1,
       "title": "The first topic in Metal Discussion",
       "forumId": 1,
+      "timestamp": 1702777389000,
       "author": 1,
-      "count": 3
+      "count": 5
     },
     {
       "id": 2,
@@ -74,26 +76,36 @@
       "forumId": 1,
       "author": 1,
       "count": 2,
-      "timestamp": "2023-12-17T00:49:54.059Z"
+      "timestamp": 1702775975000
     },
     {
       "id": 3,
       "title": "This topic is in Folk Discussion",
       "forumId": 4,
       "author": 1,
+      "timestamp": 1702775975000,
       "count": 3
     },
     {
       "title": "Wow it's a new Punk topic",
       "forumId": 3,
       "count": 1,
+      "timestamp": 1702775975000,
       "id": 4
     },
     {
       "title": "A second punk topic?",
       "forumId": 3,
       "count": 2,
+      "timestamp": 1702775975000,
       "id": 5
+    },
+    {
+      "title": "The newest topic",
+      "forumId": 1,
+      "count": 1,
+      "timestamp": 1702776085000,
+      "id": 6
     }
   ],
   "comments": [
@@ -152,8 +164,25 @@
     {
       "topicId": 2,
       "text": "Update the timestamp!",
-      "timestamp": "2023-12-17T00:49:54.059Z",
+      "timestamp": 1702775975000,
       "id": 11
+    },
+    {
+      "topicId": 6,
+      "text": "Whatatat",
+      "id": 12
+    },
+    {
+      "topicId": 1,
+      "text": "A fourth comment in here",
+      "timestamp": 1702777320,
+      "id": 13
+    },
+    {
+      "topicId": 1,
+      "text": "The fifth comment!",
+      "timestamp": 1702777389000,
+      "id": 14
     }
   ]
 }

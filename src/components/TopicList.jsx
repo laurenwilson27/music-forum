@@ -2,6 +2,7 @@ import AddTopicForm from "./AddTopicForm";
 
 import useGet from "../hooks/useGet";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import moment from "moment";
 
 const TopicList = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const TopicList = () => {
   // The forumID parameter is used to apply a filter to the json-server request
   const params = useParams();
   const { data, isLoading, error } = useGet(
-    `http://localhost:7000/forums/${params.forumID}?_embed=topics`
+    `http://localhost:7000/forums/${params.forumID}?_sort=timestamp&_embed=topics`
   );
 
   // Show placeholders if loading is in progress or has failed
@@ -27,7 +28,7 @@ const TopicList = () => {
   // Function to add a topic + first comment within it; passed to the topic form
   const addTopic = async (title, comment) => {
     // Create a timestamp for the following requests
-    const now = new Date();
+    const now = moment().unix() * 1000;
 
     // POST the new topic to the DB topics
     const res = await fetch("http://localhost:7000/topics", {
@@ -71,6 +72,10 @@ const TopicList = () => {
     navigate(`/topic/${resData.id}`);
   };
 
+  const timeSort = (a, b) => {
+    return b.timestamp - a.timestamp;
+  };
+
   return (
     <div>
       List of topics for {data.name}
@@ -83,14 +88,14 @@ const TopicList = () => {
           </tr>
         </thead>
         <tbody>
-          {data.topics.map((topic) => {
+          {data.topics.sort(timeSort).map((topic) => {
             return (
               <tr key={topic.id}>
                 <td>
                   <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
                 </td>
                 <td>{topic.count}</td>
-                <td>{topic.timestamp}</td>
+                <td>{moment(topic.timestamp).format("LLLL")}</td>
               </tr>
             );
           })}

@@ -3,6 +3,9 @@ import AddCommentForm from "./AddCommentForm";
 import useGet from "../hooks/useGet";
 import { useParams } from "react-router-dom";
 
+// Using tbe moment.js package
+import moment from "moment";
+
 const TopicView = () => {
   // The Router in App.js passes a topicID parameter based on the page URL
   // The forumID parameter is used to apply a filter to the json-server request
@@ -26,7 +29,7 @@ const TopicView = () => {
   // Function to add a comment; passed to the comment form
   const addComment = async (comment) => {
     // Create a timestamp for the following requests
-    const now = new Date();
+    const now = moment().unix() * 1000;
 
     // POST the new comment to the comments in the DB
     const res = await fetch("http://localhost:7000/comments", {
