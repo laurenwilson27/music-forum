@@ -46,6 +46,8 @@ const ForumList = () => {
                         <Link to={`forum/${forum.id}`} key={forum.id}>
                           {forum.name}
                           <br />
+                          {forum.desc}
+                          <br />
                         </Link>
                       </td>
                       <td>{forum.count}</td>
