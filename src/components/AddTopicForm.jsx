@@ -32,8 +32,9 @@ const AddTopicForm = ({ onAdd }) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <label>Comment:</label>
+      <label htmlFor="text">Comment:</label>
       <textarea
+        id="text"
         type="text"
         placeholder="Enter topic description"
         value={text}
