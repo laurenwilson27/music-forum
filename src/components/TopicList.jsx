@@ -97,7 +97,9 @@ const TopicList = () => {
                   <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
                 </td>
                 <td>{topic.count}</td>
-                <td>{moment(topic.timestamp).format("LLLL")}</td>
+                <td>
+                  {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
+                </td>
               </tr>
             );
           })}
