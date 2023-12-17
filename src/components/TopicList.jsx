@@ -26,6 +26,9 @@ const TopicList = () => {
 
   // Function to add a topic + first comment within it; passed to the topic form
   const addTopic = async (title, comment) => {
+    // Create a timestamp for the following requests
+    const now = new Date();
+
     // POST the new topic to the DB topics
     const res = await fetch("http://localhost:7000/topics", {
       method: "POST",
@@ -34,6 +37,7 @@ const TopicList = () => {
         title: title,
         forumId: Number(params.forumID),
         count: 1,
+        timestamp: now,
       }),
     });
 
@@ -44,7 +48,7 @@ const TopicList = () => {
     await fetch(`http://localhost:7000/forums/${params.forumID}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify({ count: data.count + 1 }),
+      body: JSON.stringify({ count: data.count + 1, timestamp: now }),
     });
 
     // Finally, also POST a new comment linked to the topic we've created
@@ -52,6 +56,7 @@ const TopicList = () => {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ topicId: resData.id, text: comment }),
+      timestamp: now,
     });
 
     // Append the new topic to our local data
@@ -74,6 +79,7 @@ const TopicList = () => {
           <tr>
             <td>Title</td>
             <td>Comments</td>
+            <td>Last Update</td>
           </tr>
         </thead>
         <tbody>
@@ -84,6 +90,7 @@ const TopicList = () => {
                   <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
                 </td>
                 <td>{topic.count}</td>
+                <td>{topic.timestamp}</td>
               </tr>
             );
           })}

@@ -73,7 +73,8 @@
       "title": "Anoter topic in Metal Discussion. Check Folk next!",
       "forumId": 1,
       "author": 1,
-      "count": 1
+      "count": 2,
+      "timestamp": "2023-12-17T00:49:54.059Z"
     },
     {
       "id": 3,
@@ -147,6 +148,12 @@
       "topicId": 5,
       "text": "(Second attempt but here goes!)",
       "id": 10
+    },
+    {
+      "topicId": 2,
+      "text": "Update the timestamp!",
+      "timestamp": "2023-12-17T00:49:54.059Z",
+      "id": 11
     }
   ]
 }
