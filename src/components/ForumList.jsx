@@ -1,5 +1,6 @@
 import useGet from "../hooks/useGet";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 // We use a Fragment with a 'key' value, which cannot be done with the <> shorthand
 import { Fragment } from "react";
@@ -27,6 +28,7 @@ const ForumList = () => {
           <tr>
             <td>Forum</td>
             <td>Topics</td>
+            <td>Last Update</td>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +37,7 @@ const ForumList = () => {
             return (
               <Fragment key={genre.id}>
                 <tr>
-                  <td colSpan="2">Genre: {genre.name}</td>
+                  <td colSpan="3">Genre: {genre.name}</td>
                 </tr>
                 {/* Each genre also contains a list of forums to list within that genre */}
                 {genre.forums.map((forum) => {
@@ -48,6 +50,7 @@ const ForumList = () => {
                         </Link>
                       </td>
                       <td>{forum.count}</td>
+                      <td>{moment(forum.timestamp).format("LLLL")}</td>
                     </tr>
                   );
                 })}

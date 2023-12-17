@@ -16,9 +16,10 @@ const AddCommentForm = ({ onAdd }) => {
   };
 
   return (
-    <form className="add-comment" onSubmit={onSubmit}>
-      <label>Comment:</label>
+    <form className="add-comment" name="newCommentForm" onSubmit={onSubmit}>
+      <label htmlFor="text">Comment:</label>
       <textarea
+        id="text"
         type="text"
         placeholder="Add comment here"
         value={text}

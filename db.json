@@ -34,31 +34,36 @@
       "id": 2,
       "genreId": 2,
       "name": "Rock Discussion",
+      "timestamp": 1702775975000,
       "count": 0
     },
     {
       "id": 3,
       "genreId": 3,
       "name": "Punk Discussion",
+      "timestamp": 1702775975000,
       "count": 2
     },
     {
       "id": 4,
       "genreId": 4,
       "name": "Folk Discussion",
+      "timestamp": 1702775975000,
       "count": 1
     },
     {
       "id": 5,
       "genreId": 5,
       "name": "Alternative Discussion",
+      "timestamp": 1702775975000,
       "count": 0
     },
     {
       "id": 6,
       "genreId": 2,
       "name": "Rock Climbing",
-      "count": 0
+      "timestamp": 1702780303000,
+      "count": 1
     }
   ],
   "topics": [
@@ -106,6 +111,13 @@
       "count": 1,
       "timestamp": 1702776085000,
       "id": 6
+    },
+    {
+      "title": "What is rock climbing?",
+      "forumId": 6,
+      "count": 2,
+      "timestamp": 1702780312000,
+      "id": 7
     }
   ],
   "comments": [
@@ -183,6 +195,17 @@
       "text": "The fifth comment!",
       "timestamp": 1702777389000,
       "id": 14
+    },
+    {
+      "topicId": 7,
+      "text": "Rock climbing is a physically and mentally demanding sport that involves ascending natural rock formations or artificial climbing walls. Climbers use their hands and feet to ascend vertical or nearly vertical surfaces. The goal is to reach the summit or endpoint of a predetermined route. Rock climbing can be pursued for various reasons, including recreation, fitness, competition, or as a part of mountaineering.",
+      "id": 15
+    },
+    {
+      "topicId": 7,
+      "text": "Rock climbing requires a combination of strength, flexibility, balance, and problem-solving skills. It can be enjoyed by people of various ages and skill levels, from beginners at indoor climbing gyms to experienced climbers tackling challenging outdoor routes. Safety is a paramount concern, and climbers often use harnesses, helmets, and other protective gear to minimize the risk of injury.",
+      "timestamp": 1702780312000,
+      "id": 16
     }
   ]
 }
