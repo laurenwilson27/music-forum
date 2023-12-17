@@ -8,7 +8,7 @@ import moment from "moment";
 
 const TopicView = () => {
   // The Router in App.js passes a topicID parameter based on the page URL
-  // The forumID parameter is used to apply a filter to the json-server request
+  // The topicID parameter is used to apply a filter to the json-server request
   const params = useParams();
   const { data, isLoading, error, setData } = useGet(
     //This endpoint returns the details of a topic, plus every comment with a matching topicID
