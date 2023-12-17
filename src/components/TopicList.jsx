@@ -61,7 +61,7 @@ const TopicList = () => {
     });
 
     // Append the new topic to our local data
-    // (Commented out, we navigate to the new topic instead)
+    // (Deprecated, we navigate to the new topic instead)
     // setData({
     //   ...data,
     //   count: data.count + 1,
@@ -72,6 +72,7 @@ const TopicList = () => {
     navigate(`/topic/${resData.id}`);
   };
 
+  // Function used when sorting a list of topic objects by their timestamp
   const timeSort = (a, b) => {
     return b.timestamp - a.timestamp;
   };
@@ -88,6 +89,7 @@ const TopicList = () => {
           </tr>
         </thead>
         <tbody>
+          {/* Data returned by the API is sorted by ID, sort topics by timestamp instead */}
           {data.topics.sort(timeSort).map((topic) => {
             return (
               <tr key={topic.id}>
