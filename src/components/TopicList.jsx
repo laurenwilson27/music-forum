@@ -56,10 +56,15 @@ const TopicList = () => {
     const commentRes = await fetch("http://localhost:7000/comments", {
       method: "POST",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify({ topicId: resData.id, text: comment }),
-      timestamp: now,
+      body: JSON.stringify({
+        topicId: resData.id,
+        text: comment,
+        timestamp: now,
+        likes: 1,
+      }),
     });
 
+    // Locally store that we've liked our own comment
     const commentData = await commentRes.json();
     localStorage.setItem(
       "likes",
