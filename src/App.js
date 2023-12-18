@@ -6,6 +6,8 @@ import ForumList from "./components/ForumList";
 import TopicView from "./components/TopicView";
 import Register from "./components/Register";
 
+import AvatarSelect from "./components/AvatarSelect";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        <AvatarSelect />
         <main>
           {/* The main content is determined using the Router */}
           <Routes>
