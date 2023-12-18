@@ -28,8 +28,8 @@
       "genreId": 1,
       "name": "Metal Discussion",
       "desc": "A description for this forum",
-      "count": 3,
-      "timestamp": 1702776085000
+      "count": 4,
+      "timestamp": 1702868312000
     },
     {
       "id": 2,
@@ -77,9 +77,9 @@
       "id": 1,
       "title": "The first topic in Metal Discussion",
       "forumId": 1,
-      "timestamp": 1702777389000,
+      "timestamp": 1702868275000,
       "author": 1,
-      "count": 5
+      "count": 6
     },
     {
       "id": 2,
@@ -131,18 +131,21 @@
       "id": 1,
       "topicId": 1,
       "text": "This is a comment in the first Metal Discussion topic.",
-      "author": 1
+      "author": 1,
+      "likes": 8
     },
     {
       "id": 2,
       "topicId": 1,
       "text": "This is an enthusiastic response!",
-      "author": 1
+      "author": 1,
+      "likes": 0
     },
     {
       "topicId": 1,
       "text": "A third comment",
-      "id": 3
+      "id": 3,
+      "likes": 1
     },
     {
       "topicId": 2,
@@ -194,13 +197,15 @@
       "topicId": 1,
       "text": "A fourth comment in here",
       "timestamp": 1702777320,
-      "id": 13
+      "id": 13,
+      "likes": 0
     },
     {
       "topicId": 1,
       "text": "The fifth comment!",
       "timestamp": 1702777389000,
-      "id": 14
+      "id": 14,
+      "likes": -1
     },
     {
       "topicId": 7,
@@ -212,6 +217,18 @@
       "text": "Rock climbing requires a combination of strength, flexibility, balance, and problem-solving skills. It can be enjoyed by people of various ages and skill levels, from beginners at indoor climbing gyms to experienced climbers tackling challenging outdoor routes. Safety is a paramount concern, and climbers often use harnesses, helmets, and other protective gear to minimize the risk of injury.",
       "timestamp": 1702780312000,
       "id": 16
+    },
+    {
+      "topicId": 1,
+      "text": "This is a comment that I like",
+      "timestamp": 1702868275000,
+      "likes": 1,
+      "id": 17
+    },
+    {
+      "topicId": 8,
+      "text": "And I like it.",
+      "id": 18
     }
   ]
 }
