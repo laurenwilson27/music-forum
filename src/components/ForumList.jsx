@@ -1,6 +1,5 @@
 import useGet from "../hooks/useGet";
 import { Link } from "react-router-dom";
-import moment from "moment";
 
 // We use a Fragment with a 'key' value, which cannot be done with the <> shorthand
 import { Fragment } from "react";

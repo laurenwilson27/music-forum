@@ -1,5 +1,8 @@
 {
-  "users": [],
+  "users": [
+    { "id": 1, "name": "Fogtown Admin", "avatar": "metal.png" },
+    { "id": 2, "name": "Some Other User", "avatar": "georgestreet.png" }
+  ],
   "genres": [
     {
       "id": 1,
@@ -28,8 +31,8 @@
       "genreId": 1,
       "name": "Metal Discussion",
       "desc": "A description for this forum",
-      "count": 3,
-      "timestamp": 1702776085000
+      "count": 4,
+      "timestamp": 1702868312000
     },
     {
       "id": 2,
@@ -77,15 +80,15 @@
       "id": 1,
       "title": "The first topic in Metal Discussion",
       "forumId": 1,
-      "timestamp": 1702777389000,
-      "author": 1,
-      "count": 5
+      "timestamp": 1702868275000,
+      "userId": 1,
+      "count": 6
     },
     {
       "id": 2,
       "title": "Anoter topic in Metal Discussion. Check Folk next!",
       "forumId": 1,
-      "author": 1,
+      "userId": 1,
       "count": 2,
       "timestamp": 1702775975000
     },
@@ -93,7 +96,7 @@
       "id": 3,
       "title": "This topic is in Folk Discussion",
       "forumId": 4,
-      "author": 1,
+      "userId": 1,
       "timestamp": 1702775975000,
       "count": 3
     },
@@ -101,6 +104,7 @@
       "title": "Wow it's a new Punk topic",
       "forumId": 3,
       "count": 1,
+
       "timestamp": 1702775975000,
       "id": 4
     },
@@ -131,79 +135,97 @@
       "id": 1,
       "topicId": 1,
       "text": "This is a comment in the first Metal Discussion topic.",
-      "author": 1
+      "userId": 1,
+      "likes": 8
     },
     {
       "id": 2,
       "topicId": 1,
       "text": "This is an enthusiastic response!",
-      "author": 1
+      "userId": 2,
+      "likes": 0
     },
     {
       "topicId": 1,
       "text": "A third comment",
-      "id": 3
+      "id": 3,
+      "userId": 1,
+      "likes": 1
     },
     {
       "topicId": 2,
+      "userId": 1,
       "text": "First comment but in anoter [sic] topic.",
       "id": 4
     },
     {
       "topicId": 3,
       "text": "Here's some words",
+      "userId": 1,
       "id": 5
     },
     {
       "topicId": 3,
       "text": "Some more words for good measure",
+      "userId": 1,
       "id": 6
     },
     {
       "topicId": 3,
       "text": "A third one",
+      "userId": 1,
       "id": 7
     },
     {
       "topicId": 4,
       "text": "Look at that!",
+      "userId": 1,
       "id": 8
     },
     {
       "topicId": 5,
       "text": "Yup something like that",
+      "userId": 1,
       "id": 9
     },
     {
       "topicId": 5,
       "text": "(Second attempt but here goes!)",
+      "userId": 1,
       "id": 10
     },
     {
       "topicId": 2,
       "text": "Update the timestamp!",
       "timestamp": 1702775975000,
+      "userId": 1,
       "id": 11
     },
     {
       "topicId": 6,
       "text": "Whatatat",
+      "userId": 1,
       "id": 12
     },
     {
       "topicId": 1,
       "text": "A fourth comment in here",
       "timestamp": 1702777320,
-      "id": 13
+      "userId": 1,
+      "id": 13,
+      "likes": 0
     },
     {
       "topicId": 1,
       "text": "The fifth comment!",
       "timestamp": 1702777389000,
-      "id": 14
+      "userId": 1,
+      "id": 14,
+      "likes": -1
     },
     {
       "topicId": 7,
+      "userId": 1,
       "text": "Rock climbing is a physically and mentally demanding sport that involves ascending natural rock formations or artificial climbing walls. Climbers use their hands and feet to ascend vertical or nearly vertical surfaces. The goal is to reach the summit or endpoint of a predetermined route. Rock climbing can be pursued for various reasons, including recreation, fitness, competition, or as a part of mountaineering.",
       "id": 15
     },
@@ -211,7 +233,16 @@
       "topicId": 7,
       "text": "Rock climbing requires a combination of strength, flexibility, balance, and problem-solving skills. It can be enjoyed by people of various ages and skill levels, from beginners at indoor climbing gyms to experienced climbers tackling challenging outdoor routes. Safety is a paramount concern, and climbers often use harnesses, helmets, and other protective gear to minimize the risk of injury.",
       "timestamp": 1702780312000,
+      "userId": 1,
       "id": 16
+    },
+    {
+      "topicId": 1,
+      "text": "This is a comment that I like",
+      "timestamp": 1702868275000,
+      "userId": 1,
+      "likes": 1,
+      "id": 17
     }
   ]
 }

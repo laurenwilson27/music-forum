@@ -12,3 +12,8 @@
   border: 1px dashed #444;
   min-height: 48px;
 }
+
+select {
+  color: white;
+  background-color: #444;
+}

@@ -53,12 +53,26 @@ const TopicList = () => {
     });
 
     // Finally, also POST a new comment linked to the topic we've created
-    await fetch("http://localhost:7000/comments", {
+    const commentRes = await fetch("http://localhost:7000/comments", {
       method: "POST",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify({ topicId: resData.id, text: comment }),
-      timestamp: now,
+      body: JSON.stringify({
+        topicId: resData.id,
+        text: comment,
+        timestamp: now,
+        likes: 1,
+      }),
     });
+
+    // Locally store that we've liked our own comment
+    const commentData = await commentRes.json();
+    localStorage.setItem(
+      "likes",
+      JSON.stringify({
+        ...JSON.parse(localStorage.getItem("likes")),
+        [commentData.id]: true,
+      })
+    );
 
     // Append the new topic to our local data
     // (Deprecated, we navigate to the new topic instead)
@@ -97,7 +111,9 @@ const TopicList = () => {
                   <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
                 </td>
                 <td>{topic.count}</td>
-                <td>{moment(topic.timestamp).format("LLLL")}</td>
+                <td>
+                  {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
+                </td>
               </tr>
             );
           })}

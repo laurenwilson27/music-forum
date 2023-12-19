@@ -32,7 +32,7 @@ const AddTopicForm = ({ onAdd }) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <label htmlFor="text">Comment:</label>
+      <label htmlFor="text">Description:</label>
       <textarea
         id="text"
         type="text"
