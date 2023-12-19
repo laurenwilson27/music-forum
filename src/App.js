@@ -15,7 +15,6 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <AvatarSelect />
         <main>
           {/* The main content is determined using the Router */}
           <Routes>
