@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+body {
+  max-width: 100%;
+}
+
+select {
+  color: white;
+  background-color: #444;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .comment {
   border: 2px solid #eee;
 }
@@ -13,7 +28,10 @@
   min-height: 48px;
 }
 
-select {
-  color: white;
-  background-color: #444;
+#loginform {
+  display: flex;
+}
+
+.loggedInUser {
+  display: flex;
 }
