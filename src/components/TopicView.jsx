@@ -1,8 +1,10 @@
 import AddCommentForm from "./AddCommentForm";
 import CommentLikes from "./CommentLikes";
+import CommentUser from "./CommentUser";
 
 import useGet from "../hooks/useGet";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 // Using tbe moment.js package
 import moment from "moment";
@@ -14,6 +16,7 @@ const TopicView = () => {
     //This endpoint returns the details of a topic, plus every comment with a matching topicID
     `http://localhost:7000/topics/${params.topicID}?_embed=comments`
   );
+  const [users, setUsers] = useState({});
 
   // Show placeholders if loading is in progress or has failed
   if (isLoading) return <div>Loading comments...</div>;
@@ -25,6 +28,29 @@ const TopicView = () => {
         {error}
       </div>
     );
+
+  // At this point in the function, it can be assumed that the data is loaded
+  // Individually fetch the information for each unique user in the comments
+
+  // (I really don't like this approach but it was the best I could come up with)
+  data.comments.forEach((comment) => {
+    if (!(comment.userId in users)) {
+      // These fetches are *synchronous* - page load time will increase with number of unique users in comments
+      fetch(`http://localhost:7000/users/${comment.userId}`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((user) => {
+          setUsers({
+            ...users,
+            [comment.userId]: {
+              name: user.name,
+              avatar: user.avatar,
+            },
+          });
+        });
+    }
+  });
 
   // Function to add a comment; passed to the comment form
   const addComment = async (comment) => {
@@ -76,6 +102,12 @@ const TopicView = () => {
           {data.comments.map((comment) => {
             return (
               <tr className="comment" key={comment.id}>
+                {comment.userId in users && (
+                  <CommentUser
+                    name={users[comment.userId].name}
+                    avatar={users[comment.userId].avatar}
+                  />
+                )}
                 <td>{comment.text}</td>
                 <CommentLikes comment={comment} />
               </tr>
