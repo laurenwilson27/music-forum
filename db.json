@@ -49,8 +49,8 @@
       "genreId": 2,
       "name": "Rock Discussion",
       "desc": "A description for this forum",
-      "timestamp": 1702775975000,
-      "count": 0
+      "timestamp": 1703018383000,
+      "count": 2
     },
     {
       "id": 3,
@@ -114,7 +114,6 @@
       "title": "Wow it's a new Punk topic",
       "forumId": 3,
       "count": 1,
-
       "timestamp": 1702775975000,
       "id": 4
     },
@@ -138,6 +137,20 @@
       "count": 2,
       "timestamp": 1702780312000,
       "id": 7
+    },
+    {
+      "title": "This is the only rock topic",
+      "forumId": 2,
+      "count": 2,
+      "timestamp": 1703018220000,
+      "id": 8
+    },
+    {
+      "title": "I did it I made another rock topic",
+      "forumId": 2,
+      "count": 2,
+      "timestamp": 1703018413000,
+      "id": 9
     }
   ],
   "comments": [
@@ -215,7 +228,8 @@
       "topicId": 6,
       "text": "Whatatat",
       "userId": 1,
-      "id": 12
+      "id": 12,
+      "likes": 0
     },
     {
       "topicId": 1,
@@ -253,6 +267,38 @@
       "userId": 1,
       "likes": 1,
       "id": 17
+    },
+    {
+      "topicId": 8,
+      "text": "Don't post another please!",
+      "timestamp": 1703018193000,
+      "likes": 1,
+      "userId": 2,
+      "id": 18
+    },
+    {
+      "topicId": 8,
+      "text": "What if I do?",
+      "timestamp": 1703018220000,
+      "likes": 1,
+      "userId": 2,
+      "id": 19
+    },
+    {
+      "topicId": 9,
+      "text": "I told myself not to do it",
+      "timestamp": 1703018383000,
+      "likes": 1,
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "topicId": 9,
+      "text": "That's kinda weird.",
+      "timestamp": 1703018413000,
+      "likes": 1,
+      "userId": 1,
+      "id": 21
     }
   ]
 }

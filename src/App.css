@@ -34,4 +34,21 @@ header {
 
 .loggedInUser {
   display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.headerAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.error {
+  color: red;
+}
+
+.back {
+  color: yellow;
+  font-weight: bold;
 }

@@ -1,11 +1,14 @@
 import AddTopicForm from "./AddTopicForm";
+import BackBtn from "./BackBtn";
 
 import useGet from "../hooks/useGet";
+import useUser from "../hooks/useUser";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import moment from "moment";
 
 const TopicList = () => {
   const navigate = useNavigate();
+  const [user] = useUser();
 
   // The Router in App.js passes a forumID parameter based on the page URL
   // The forumID parameter is used to apply a filter to the json-server request
@@ -61,6 +64,7 @@ const TopicList = () => {
         text: comment,
         timestamp: now,
         likes: 1,
+        userId: user.userId,
       }),
     });
 
@@ -93,6 +97,7 @@ const TopicList = () => {
 
   return (
     <div>
+      <BackBtn label="Back to Home" to="/" />
       List of topics for {data.name}
       <table>
         <thead>
@@ -119,7 +124,7 @@ const TopicList = () => {
           })}
         </tbody>
       </table>
-      <AddTopicForm onAdd={addTopic} />
+      {user.loggedIn && <AddTopicForm onAdd={addTopic} />}
     </div>
   );
 };

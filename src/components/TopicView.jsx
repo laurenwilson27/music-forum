@@ -3,11 +3,14 @@ import CommentLikes from "./CommentLikes";
 import CommentUser from "./CommentUser";
 
 import useGet from "../hooks/useGet";
+import useUser from "../hooks/useUser";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-// Using tbe moment.js package
+// Using tbe moment.js package - outdated, but simple
 import moment from "moment";
+import BackBtn from "./BackBtn";
+
 const TopicView = () => {
   // The Router in App.js passes a topicID parameter based on the page URL
   // The topicID parameter is used to apply a filter to the json-server request
@@ -17,6 +20,7 @@ const TopicView = () => {
     `http://localhost:7000/topics/${params.topicID}?_embed=comments`
   );
   const [users, setUsers] = useState({});
+  const [user] = useUser();
 
   // Show placeholders if loading is in progress or has failed
   if (isLoading) return <div>Loading comments...</div>;
@@ -66,6 +70,7 @@ const TopicView = () => {
         text: comment,
         timestamp: now,
         likes: 1,
+        userId: user.userId,
       }),
     });
 
@@ -96,6 +101,7 @@ const TopicView = () => {
 
   return (
     <div>
+      <BackBtn label="Back to Forum" to={`/forum/${data.forumId}`} />
       Comments in: {data.title}
       <table>
         <tbody>
@@ -116,7 +122,7 @@ const TopicView = () => {
         </tbody>
       </table>
       {/* New Comments section */}
-      <AddCommentForm onAdd={addComment} />
+      {user.loggedIn && <AddCommentForm onAdd={addComment} />}
     </div>
   );
 };

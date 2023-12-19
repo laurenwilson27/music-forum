@@ -1,20 +1,38 @@
 import useUser from "../hooks/useUser";
 
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 // CryptoJS is no longer maintained, but it's very easy to use
 import CryptoJS from "crypto-js";
 
 const LoginPanel = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useUser();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState(undefined);
+
+  // Logs the user out, resets the login form
   const logout = () => {
     setUsername("");
     setPassword("");
     setUser({ loggedIn: false, userId: 0, userName: "", userAvatar: "" });
+
+    // Refresh the page so all other elements reload
+    navigate(0);
   };
 
+  // Sets an error message - it is cleared after 5 seconds
+  const doError = (msg) => {
+    setError(msg);
+
+    setTimeout(() => {
+      setError(undefined);
+    }, 5000);
+  };
+
+  // Attempts to log in based on the information in the form
   const tryLogin = async (e) => {
     e.preventDefault();
 
@@ -32,13 +50,26 @@ const LoginPanel = () => {
         userName: json[0].name,
         userAvatar: json[0].avatar,
       });
-    }
+
+      // Refresh the page so all other elements reload
+      navigate(0);
+    } else doError("Login failed - check your username and password");
   };
 
   return (
     <div>
+      {error && <div className="error">{error}</div>}
       {user.loggedIn === true ? (
-        <button onClick={logout}>Log Out</button>
+        // Display these elements when logged in
+        <div className="loggedInUser">
+          <img
+            src={`/avatars/${user.userAvatar}`}
+            className="headerAvatar"
+            alt="Your user avatar"
+          />
+          <span>{user.userName}</span>
+          <button onClick={logout}>Sign Out</button>
+        </div>
       ) : (
         // Display this form when logged out
         <form id="loginform" title="Login Form" onSubmit={tryLogin}>
@@ -56,7 +87,10 @@ const LoginPanel = () => {
               setPassword(e.target.value);
             }}
           />
-          <button type="submit">Log In</button>
+          <button type="submit">Sign In</button>
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
         </form>
       )}
     </div>

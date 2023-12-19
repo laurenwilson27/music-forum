@@ -6,8 +6,6 @@ import ForumList from "./components/ForumList";
 import TopicView from "./components/TopicView";
 import Register from "./components/Register";
 
-import AvatarSelect from "./components/AvatarSelect";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
