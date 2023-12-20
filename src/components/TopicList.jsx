@@ -155,9 +155,13 @@ const TopicList = () => {
               );
             })
           ) : (
-            <span>
-              There are no topics in this forum. Consider creating one!
-            </span>
+            <tr>
+              <td colSpan="4">
+                <span className="tableFont2 TopicBtn boardBtn">
+                  There are no topics in this forum. Consider creating one!
+                </span>
+              </td>
+            </tr>
           )}
         </tbody>
       </table>
