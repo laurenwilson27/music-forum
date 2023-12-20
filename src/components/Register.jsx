@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import useUser from "../hooks/useUser";
+import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
   const [user, setUser] = useUser();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState("");
+  const [updatedUser, setUpdatedUser] = useState(null);
 
   useEffect(() => {
     if (user.loggedIn) {
@@ -43,11 +48,13 @@ function Register() {
       userName: data.username,
       userAvatar: data.avatar,
     };
-    console.log("Updated user object:", updatedUser);
 
     setUser(updatedUser);
+    setUpdatedUser(updatedUser);
 
     localStorage.setItem("user", JSON.stringify(updatedUser));
+
+    navigate("/", { state: { user: newUser } });
   };
 
   return (
@@ -104,9 +111,16 @@ function Register() {
             placeholder="Enter your password"
           />
         </div>
-        <button className="btn" onClick={addUser}>
-          Log In
-        </button>
+        <Link
+          to={{
+            pathname: "/",
+            state: { user: updatedUser },
+          }}
+        >
+          <button className="btn" onClick={addUser}>
+            Log In
+          </button>
+        </Link>
       </div>
       <div className="loggedInUser">
         <img

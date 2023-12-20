@@ -22,6 +22,7 @@ function App() {
             <Route path="/forum/:forumID" element={<TopicList />} />
             <Route path="/topic/:topicID" element={<TopicView />} />
             <Route path="/" element={<ForumList />} />
+            {/* <Route path="/header" element={<Header />} /> */}
           </Routes>
         </main>
       </div>
