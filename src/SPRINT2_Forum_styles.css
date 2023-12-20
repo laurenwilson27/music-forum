@@ -25,6 +25,7 @@ html {
 }
 .header-container {
   position: relative;
+  height: 100%;
   /* Additional styles for your header container */
 }
 
@@ -40,7 +41,6 @@ html {
   height: 124px;
   border: 4px solid #6b529c;
   border-radius: 8px;
-  width: calc(100% - 32px); /* Adjust width as needed */
   margin: 16px;
   margin-right: 16px; /* Adjust this value if needed */
   margin-bottom: 16px;
@@ -130,6 +130,7 @@ html {
 }
 
 .btns-containerB .btnB {
+  all: unset;
   padding: 8px 8px; /* Adjust padding as needed */
   margin: 4px;
   margin-bottom: 8px;
@@ -253,6 +254,7 @@ body {
 }
 
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,6 +270,10 @@ body {
   width: calc(100% - 32px);
 
   transform: translateY(-40px);
+}
+
+.genreTable {
+  margin-bottom: 8px;
 }
 
 table {
@@ -683,6 +689,43 @@ table {
   margin-top: 0; /* Remove top margin of the table */
 }
 
+#loginform {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#loginform input {
+  border: none;
+  background: #f1f1f1;
+  width: 20%;
+
+  padding: 8px; /* Fix the padding */
+  margin: 8px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.loggedInUser {
+  margin: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.looggedInUser .btnB {
+  margin-bottom: 4px;
+}
+
+.headerAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 1000px) {
   .header {
     height: auto; /* Adjusted height for responsiveness */
@@ -724,18 +767,19 @@ table {
 
   .btns-containerA,
   .btns-containerB {
-    position: static; /* Default positioning */
     display: flex;
     flex-direction: row; /* Align buttons horizontally */
     justify-content: center; /* Center buttons */
+    align-items: stretch;
     margin-top: 8px; /* Adjust margin as needed */
   }
 
   .btns-containerAnB {
+    height: 100%;
     flex-direction: column;
     display: flex;
     justify-content: center; /* Horizontally center items */
-    align-items: center;
+    align-items: baseline;
   }
 
   .btns-containerA .btnA,

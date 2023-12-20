@@ -12,20 +12,20 @@ const Header = () => {
               “A LOCAL MUSIC FORUM FOR NEWFOUNDLAND SOUNDS”
             </blockquote>
           </div>
-          <div className="btns-containerAnB">
-            <div className="btns-containerA">
+          <div className="btns-containerA">
+            <Link to="/">
               <button className="btnA" type="button">
                 Home
               </button>
-              <button className="btnA" type="button">
-                About
-              </button>
-              <button className="btnA" type="button">
-                Contact
-              </button>
-            </div>
-            <LoginPanel />
+            </Link>
+            <button className="btnA" type="button">
+              About
+            </button>
+            <button className="btnA" type="button">
+              Contact
+            </button>
           </div>
+          <LoginPanel />
         </div>
       </div>
     </header>

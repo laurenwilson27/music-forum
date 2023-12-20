@@ -58,8 +58,9 @@ const LoginPanel = () => {
 
   return (
     <div className="btns-containerB">
-      {error && <div className="error">{error}</div>}
-      {user.loggedIn === true ? (
+      {error ? (
+        <div className="error">{error}</div>
+      ) : user.loggedIn === true ? (
         // Display these elements when logged in
         <div className="loggedInUser">
           <img
@@ -68,7 +69,9 @@ const LoginPanel = () => {
             alt="Your user avatar"
           />
           <span>{user.userName}</span>
-          <button onClick={logout}>Sign Out</button>
+          <button onClick={logout} className="btnB">
+            Sign Out
+          </button>
         </div>
       ) : (
         // Display this form when logged out
@@ -87,9 +90,13 @@ const LoginPanel = () => {
               setPassword(e.target.value);
             }}
           />
-          <button type="submit">Sign In</button>
+          <button type="submit" className="btnB">
+            Sign In
+          </button>
           <Link to="/register">
-            <button>Register</button>
+            <button className="btnB" type="text">
+              Register
+            </button>
           </Link>
         </form>
       )}

@@ -14,13 +14,15 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          {/* The main content is determined using the Router */}
-          <Routes>
-            <Route path="/register" element={<Register />} />
-            <Route path="/forum/:forumID" element={<TopicList />} />
-            <Route path="/topic/:topicID" element={<TopicView />} />
-            <Route path="/" element={<ForumList />} />
-          </Routes>
+          <div className="container">
+            {/* The main content is determined using the Router */}
+            <Routes>
+              <Route path="/register" element={<Register />} />
+              <Route path="/forum/:forumID" element={<TopicList />} />
+              <Route path="/topic/:topicID" element={<TopicView />} />
+              <Route path="/" element={<ForumList />} />
+            </Routes>
+          </div>
         </main>
       </div>
     </Router>
