@@ -41,8 +41,9 @@
       "genreId": 1,
       "name": "Metal Discussion",
       "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
-      "count": 0,
-      "icon": "fa-brands fa-microblog"
+      "count": 2,
+      "icon": "fa-brands fa-microblog",
+      "timestamp": 1703100998000
     },
     {
       "id": 2,
@@ -70,15 +71,15 @@
     },
     {
       "id": 5,
-      "genreId": 1,
-      "name": "Metal Discussion",
+      "genreId": 2,
+      "name": "Rock Discussion",
       "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
       "count": 0,
       "icon": "fa-brands fa-microblog"
     },
     {
       "id": 6,
-      "genreId": 1,
+      "genreId": 2,
       "name": "Events",
       "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
       "count": 0,
@@ -86,7 +87,7 @@
     },
     {
       "id": 7,
-      "genreId": 1,
+      "genreId": 2,
       "name": "Local Music Artists",
       "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
       "count": 0,
@@ -94,13 +95,127 @@
     },
     {
       "id": 8,
-      "genreId": 1,
+      "genreId": 2,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 9,
+      "genreId": 3,
+      "name": "Punk Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 10,
+      "genreId": 3,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 11,
+      "genreId": 3,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 12,
+      "genreId": 3,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 13,
+      "genreId": 4,
+      "name": "Folk Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 14,
+      "genreId": 4,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 15,
+      "genreId": 4,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 16,
+      "genreId": 4,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 17,
+      "genreId": 5,
+      "name": "Alternative Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 18,
+      "genreId": 5,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 19,
+      "genreId": 5,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 20,
+      "genreId": 5,
       "name": "New Releases and Promotions",
       "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
       "count": 0,
       "icon": "fa-solid fa-bomb"
     }
   ],
-  "topics": [],
-  "comments": []
+  "topics": [
+    {
+      "title": "Example Topic",
+      "forumId": 1,
+      "count": 1,
+      "timestamp": 1703099645000,
+      "updateName": "Fogtown Admin",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "topicId": 1,
+      "text": "This is an example of a user-created topic.",
+      "timestamp": 1703099645000,
+      "likes": 1,
+      "userId": 1,
+      "id": 1
+    }
+  ]
 }

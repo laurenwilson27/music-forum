@@ -1,5 +1,4 @@
 import AddTopicForm from "./AddTopicForm";
-import BackBtn from "./BackBtn";
 
 import useGet from "../hooks/useGet";
 import useUser from "../hooks/useUser";
@@ -41,6 +40,7 @@ const TopicList = () => {
         title: title,
         forumId: Number(params.forumID),
         count: 1,
+        updateName: user.name,
         timestamp: now,
       }),
     });
@@ -96,34 +96,72 @@ const TopicList = () => {
   };
 
   return (
-    <div>
-      <BackBtn label="Back to Home" to="/" />
-      List of topics for {data.name}
+    <div className="container threadcontainer">
       <table>
         <thead>
-          <tr>
-            <td>Title</td>
-            <td>Comments</td>
-            <td>Last Update</td>
+          <tr className="header-row">
+            <th className="title-cell-title" colSpan="2">
+              <span className="tableFont0">{data.name}</span>
+            </th>
+            <th className="title-cell" colSpan="1" width="100">
+              <span className="tableFont1">
+                # of
+                <br />
+                Posts
+              </span>
+            </th>
+            <th className="title-cell" colSpan="1" width="240">
+              <span className="tableFont1">Last Update</span>
+            </th>
           </tr>
         </thead>
         <tbody>
           {/* Data returned by the API is sorted by ID, sort topics by timestamp instead */}
-          {data.topics.sort(timeSort).map((topic) => {
-            return (
-              <tr key={topic.id}>
-                <td>
-                  <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
-                </td>
-                <td>{topic.count}</td>
-                <td>
-                  {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
-                </td>
-              </tr>
-            );
-          })}
+          {data.topics.length > 0 ? (
+            data.topics.sort(timeSort).map((topic) => {
+              return (
+                <tr key={topic.id}>
+                  <td
+                    colSpan="2"
+                    style={{
+                      textAlign: "left",
+                    }}
+                  >
+                    <span className="tableIcon1">
+                      <i
+                        className="fa-solid fa-crow"
+                        style={{ color: "#deccff" }}
+                      />
+                    </span>
+                    <Link
+                      className="tableFont2 TopicBtn boardBtn"
+                      style={{ verticalAlign: "middle" }}
+                      to={`/topic/${topic.id}`}
+                    >
+                      {topic.title}
+                    </Link>
+                  </td>
+                  <td colSpan="1" width="100">
+                    <span className="tableFont2">Posts</span>
+                    <br />
+                    {topic.count}
+                  </td>
+                  <td colSpan="1" width="240">
+                    <span className="tableFont2">By: {topic.updateName}</span>
+                    <br />
+                    {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
+                  </td>
+                </tr>
+              );
+            })
+          ) : (
+            <span>
+              There are no topics in this forum. Consider creating one!
+            </span>
+          )}
         </tbody>
       </table>
+      <div className="space-between-containers" />
       {user.loggedIn && <AddTopicForm onAdd={addTopic} />}
     </div>
   );

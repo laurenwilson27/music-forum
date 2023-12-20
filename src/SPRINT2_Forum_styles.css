@@ -486,7 +486,7 @@ h1 {
 
 .container input[type="text"],
 .container input[type="password"] {
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
   /* Adjust the width here */
   padding: 10px;
   margin: 5px 0 10px 0;
@@ -655,7 +655,17 @@ body {
   width: calc(100% - 20px); /* Adjust width considering padding and borders */
 }
 
+.title-input {
+  padding: 8px; /* Fix the padding */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: calc(100% - 20px); /* Adjust width considering padding and borders */
+}
+
 .comment-btn {
+  all: unset;
   padding: 8px 12px; /* Adjust padding as needed */
   margin: 8px;
   margin-bottom: 8px;
