@@ -18,19 +18,6 @@ function Register() {
     }
   }, [user.loggedIn]);
 
-  //   const getUser = async () => {
-  //     const userFromServer = await fetchUser();
-  //     setUser(userFromServer);
-  //   };
-  //   getUser();
-  // }, [user.loggedIn]);
-
-  // const fetchUser = async () => {
-  //   const res = await fetch(`http://localhost:7000/users`);
-  //   const data = await res.json();
-  //   return data;
-  // };
-
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -49,7 +36,6 @@ function Register() {
     });
 
     const data = await res.json();
-    console.log("Data from server:", data);
 
     const updatedUser = {
       loggedIn: true,
@@ -63,8 +49,6 @@ function Register() {
 
     localStorage.setItem("user", JSON.stringify(updatedUser));
   };
-
-  // console.log(user.userName);
 
   return (
     <div>
