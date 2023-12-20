@@ -1,4 +1,4 @@
-import "./App.css";
+import "./SPRINT2_Forum_styles.css";
 
 import Header from "./components/Header";
 import TopicList from "./components/TopicList";

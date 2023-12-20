@@ -1,0 +1,762 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+
+@font-face {
+  font-family: "ZenTokyoZoo";
+  src: url("../public/SPRINT2_IMAGES/ZenTokyoZoo-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url("../public/SPRINT2_IMAGES/RussoOne-Regular.ttf") format("truetype");
+}
+
+.content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.header-container {
+  position: relative;
+  /* Additional styles for your header container */
+}
+
+.header {
+  position: relative;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  backdrop-filter: blur(5px);
+  align-items: flex-end;
+  flex-direction: row;
+  color: white;
+  height: 124px;
+  border: 4px solid #6b529c;
+  border-radius: 8px;
+  width: calc(100% - 32px); /* Adjust width as needed */
+  margin: 16px;
+  margin-right: 16px; /* Adjust this value if needed */
+  margin-bottom: 16px;
+}
+
+.titleblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-4deg);
+  padding: 10px;
+  margin-left: 8px;
+  /* Adjust the margin-left value as needed */
+}
+
+.website-name {
+  font-family: "ZenTokyoZoo", "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.slogan {
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  justify-content: center;
+  text-align: center;
+  transform: translateX(-8px);
+}
+
+/* Button Container A */
+.btns-containerA {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Position it at 50% from the left */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  /* Adjust margin-top as needed */
+  margin-top: 8px;
+}
+
+.btns-containerA .btnA {
+  all: unset;
+  padding: 8px 12px; /* Adjust padding as needed */
+  margin: 4px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  font-size: 16px;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  background-color: #6b529c;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-containerA .btnA:hover {
+  background-color: #4f3872;
+  background-size: 260px 80px;
+  background-position: center;
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Button Container B */
+.btns-containerB {
+  display: flex;
+  position: absolute;
+  bottom: 0px; /* Adjust as needed */
+  right: 4px; /* Adjust as needed */
+  margin-top: 8px; /* Adjust margin as needed */
+}
+
+.btns-containerB .btnB {
+  padding: 8px 8px; /* Adjust padding as needed */
+  margin: 4px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  font-size: 16px;
+
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  background-color: #6b529c;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-containerB .btnB:hover {
+  background-color: #4f3872; /* Change background color on hover */
+  text-decoration: underline;
+}
+
+.btns-containerAnB {
+  display: flex;
+}
+
+.breadcrumb {
+  padding: 10px;
+  background-color: transparent;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #deccff;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  margin: 12px;
+  transform: translateY(-24px);
+}
+
+.breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb ul li {
+  display: inline;
+}
+
+.breadcrumb ul li:not(:last-child):after {
+  content: "›"; /* Unicode or custom separator */
+  margin: 0 5px;
+  color: #deccff; /* Separator color */
+}
+
+.breadcrumb ul li a {
+  text-decoration: none;
+  color: #deccff;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 24px;
+  color: #deccff;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px;
+  transform: translateY(20px);
+}
+
+.user-section i {
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+.user-section img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+body {
+  background-image: url("../public/SPRINT2_IMAGES/SmokeyStage.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  color: #333;
+  min-width: 380px;
+}
+
+.btns-containerC {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btns-containerC .btnC {
+  padding: 8px 12px; /* Adjust padding as needed */
+  margin: 4px;
+  font-size: 16px;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #ffcd19;
+  background-color: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: -1px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Adjust the margin as needed */
+}
+.table-container {
+  overflow: hidden; /* Hide overflow content to maintain border */
+  margin-top: 20px;
+  /* Adjust margin and width as needed */
+
+  width: calc(100% - 32px);
+
+  transform: translateY(-40px);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Table cell styles */
+th,
+td {
+  border: 4px solid #6b529c; /* Purple border for all cells */
+  padding: 4px;
+  text-align: center;
+}
+
+/* Title cell styles */
+.title-cell {
+  border: 4px solid #6b529c;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+  /* Ensure the title cell has the purple border */
+
+  background-color: #452e74;
+}
+.title-cell-title {
+  text-align: left;
+  background-color: #452e74;
+}
+
+.tableFont0 {
+  color: #ffffff;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+  font-size: 18px;
+  padding-left: 16px;
+  letter-spacing: 4px;
+}
+
+.tableFont1 {
+  color: #ffffff;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.tableFont2 {
+  color: #9e86cc;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.tableImg1 {
+  display: block;
+  float: left;
+  padding: 16px;
+}
+
+.tableIcon1 {
+  display: block;
+  float: left;
+  padding: 16px;
+  font-size: 40px; /* changes icon size apparently */
+}
+
+.boardBtn a:hover {
+  color: #ffcd19; /* Color change on hover */
+}
+
+.table-container .columnName th {
+  background-color: rgba(
+    58,
+    93,
+    118,
+    1
+  ); /* Change to your desired background color */
+}
+
+/* Alternate row background colors */
+tr:nth-child(even) {
+  background-color: rgba(48, 26, 88, 1);
+  color: white; /* Semi-transparent pink background for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(16, 5, 37, 1);
+  color: white; /* Semi-transparent pink background for even rows */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 16px; /* Adjust left as needed */
+  right: 16px; /* Adjust right as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+  display: flex;
+  height: 100px;
+  border: 4px solid #6b529c;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin: 0; /* Reset margin */
+  padding: 0 16px; /* Adjust padding as needed */
+  margin-bottom: 20px;
+}
+
+.social-icon img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  transform: translateY(-0px);
+}
+
+.footercontentA,
+.footercontentB {
+  filter: blur(0px);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footercontentA {
+  flex: 1; /* Take remaining space in the footer */
+}
+
+.footercontentB {
+  position: relative;
+}
+
+.back-to-top {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6b529c;
+  border-radius: 3px;
+}
+
+.back-to-top a {
+  color: #fff;
+  padding: 8px 8px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  z-index: 2;
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #6b529c;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.back-to-top a:hover {
+  background-color: #4f3872; /* Change background color on hover */
+  text-decoration: underline;
+}
+
+/* 
+Topic Page */
+.TopicBtn {
+  transform: translateY(100%);
+}
+
+/* Registration Page */
+
+h1 {
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.inner-container {
+  width: 50%;
+  height: 40%;
+  border: 4px solid #6b529c;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  transform: translateY(-70px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  color: rgb(255, 255, 255);
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+  width: calc(100% - 100px);
+  /* Adjust the width here */
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container hr {
+  border: 0.5px solid #ccc;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 0px;
+  text-align: left;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 0px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  padding: 8px 8px;
+  margin: 4px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  font-size: 16px;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  background-color: #6b529c;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 4px solid #6b529c;
+  border-radius: 8px;
+}
+
+.registerbtn:hover {
+  background-color: #4f3872;
+  /* Change background color on hover */
+  text-decoration: underline;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+html,
+body {
+  min-width: 380px;
+}
+
+/* thread page */
+.userpic-thread i {
+  font-size: 50px;
+}
+
+.user-content1 img {
+  width: 120px; /* Set the width to 50px */
+  height: 120px; /* Set the height to maintain aspect ratio */
+  border-radius: 14px; /* Makes the image circular */
+  object-fit: cover;
+  padding: 8px; /* Ensures the image covers the entire container */
+}
+
+.user-title {
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  color: #ffcd19;
+}
+
+.comment-td {
+  vertical-align: top; /* Aligns the content to the top */
+  padding: 8px; /* Removes top padding */
+  margin-top: 0; /* Removes top margin */
+  /* Additional styles specific to this class */
+}
+
+/* Targeting the child spans within .comment-td */
+.comment-td > span {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.space-between-containers {
+  height: 20px;
+  width: 400px;
+}
+
+.container-addcomment {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; /* Center all content horizontally */
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  border: 4px solid #6b529c;
+  border-radius: 8px;
+  width: 100%; /* Adjust width as needed */
+  margin: 0 auto;
+  padding: 16px;
+  margin-bottom: 140px;
+}
+
+.container-addcomment h3 {
+  text-align: left;
+  padding: 4px;
+}
+
+.add-comment {
+  width: 100%;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.inputTitle,
+.btns-containerPost {
+  text-align: left;
+  width: 100%;
+  margin-left: 0; /* Ensure no margin on the left */
+}
+
+.comment-input {
+  height: 80px; /* Adjust the height as needed */
+  padding: 8px; /* Fix the padding */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: calc(100% - 20px); /* Adjust width considering padding and borders */
+}
+
+.comment-btn {
+  padding: 8px 12px; /* Adjust padding as needed */
+  margin: 8px;
+  margin-bottom: 8px;
+  width: 100px;
+  font-size: 16px;
+  font-family: "Russo One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  background-color: #6b529c;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-btn:hover {
+  background-color: #4f3872;
+  background-size: 260px 80px;
+  background-position: center;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.threadcontainer {
+  padding-top: 0;
+}
+
+table {
+  margin-top: 0; /* Remove top margin of the table */
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: auto; /* Adjusted height for responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Spacing between elements */
+    padding: 16px; /* Added padding */
+    margin: 16px;
+    border: 4px solid #6b529c;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: relative;
+  }
+
+  .titleblock {
+    transform: none; /* Reset transform */
+    margin-left: 0; /* Reset margin */
+    text-align: center;
+    transform: rotate(-4deg);
+  }
+
+  .slogan {
+    transform: none; /* Reset transform */
+    margin-left: 0; /* Reset margin */
+    text-align: center; /* Center alignment */
+  }
+
+  .btns-containerA {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    /* Position it at 50% from the left */
+    transform: translateX(0%); /* Adjust to center horizontally */
+    /* Adjust margin-top as needed */
+    margin-top: 8px;
+  }
+
+  .btns-containerA,
+  .btns-containerB {
+    position: static; /* Default positioning */
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: center; /* Center buttons */
+    margin-top: 8px; /* Adjust margin as needed */
+  }
+
+  .btns-containerAnB {
+    flex-direction: column;
+    display: flex;
+    justify-content: center; /* Horizontally center items */
+    align-items: center;
+  }
+
+  .btns-containerA .btnA,
+  .btns-containerB .btnB {
+    padding: 8px 12px; /* Adjust padding as needed */
+    margin: 4px;
+    font-size: 14px; /* Adjusted font size for responsiveness */
+  }
+
+  .breadcrumb a {
+    transform: translateY(-80px);
+  }
+
+  .user-section {
+    position: static; /* Default positioning */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 16px; /* Adjusted margin */
+    color: #deccff;
+    padding: 10px; /* Adjusted padding */
+    transform: translateY(-24px);
+  }
+}

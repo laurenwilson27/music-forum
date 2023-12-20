@@ -57,7 +57,7 @@ const LoginPanel = () => {
   };
 
   return (
-    <div>
+    <div className="btns-containerB">
       {error && <div className="error">{error}</div>}
       {user.loggedIn === true ? (
         // Display these elements when logged in
