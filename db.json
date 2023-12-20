@@ -1,7 +1,17 @@
 {
   "users": [
-    { "id": 1, "name": "Fogtown Admin", "avatar": "metal.png" },
-    { "id": 2, "name": "Some Other User", "avatar": "georgestreet.png" }
+    {
+      "id": 1,
+      "name": "Fogtown Admin",
+      "avatar": "metal.png",
+      "password": "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"
+    },
+    {
+      "id": 2,
+      "name": "Some Other User",
+      "avatar": "georgestreet.png",
+      "password": "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"
+    }
   ],
   "genres": [
     {
@@ -30,219 +40,206 @@
       "id": 1,
       "genreId": 1,
       "name": "Metal Discussion",
-      "desc": "A description for this forum",
-      "count": 4,
-      "timestamp": 1702868312000
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 2,
+      "icon": "fa-brands fa-microblog",
+      "timestamp": 1703109118000
     },
     {
       "id": 2,
-      "genreId": 2,
-      "name": "Rock Discussion",
-      "desc": "A description for this forum",
-      "timestamp": 1702775975000,
-      "count": 0
+      "genreId": 1,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
     },
     {
       "id": 3,
-      "genreId": 3,
-      "name": "Punk Discussion",
-      "desc": "A description for this forum",
-      "timestamp": 1702775975000,
-      "count": 2
+      "genreId": 1,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
     },
     {
       "id": 4,
-      "genreId": 4,
-      "name": "Folk Discussion",
-      "desc": "A description for this forum",
-      "timestamp": 1702775975000,
-      "count": 1
+      "genreId": 1,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
     },
     {
       "id": 5,
-      "genreId": 5,
-      "name": "Alternative Discussion",
-      "desc": "A description for this forum",
-      "timestamp": 1702775975000,
-      "count": 0
+      "genreId": 2,
+      "name": "Rock Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
     },
     {
       "id": 6,
       "genreId": 2,
-      "name": "Rock Climbing",
-      "desc": "A description for this forum",
-      "timestamp": 1702780303000,
-      "count": 1
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 7,
+      "genreId": 2,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 8,
+      "genreId": 2,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 9,
+      "genreId": 3,
+      "name": "Punk Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 10,
+      "genreId": 3,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 11,
+      "genreId": 3,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 12,
+      "genreId": 3,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 13,
+      "genreId": 4,
+      "name": "Folk Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 14,
+      "genreId": 4,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 15,
+      "genreId": 4,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 16,
+      "genreId": 4,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
+    },
+    {
+      "id": 17,
+      "genreId": 5,
+      "name": "Alternative Discussion",
+      "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
+      "count": 0,
+      "icon": "fa-brands fa-microblog"
+    },
+    {
+      "id": 18,
+      "genreId": 5,
+      "name": "Events",
+      "desc": "An area dedicated to the promotion of calendared music-related events in Newfoundland, including concerts, festivals, workshops, and gatherings.",
+      "count": 0,
+      "icon": "fa-regular fa-calendar-days"
+    },
+    {
+      "id": 19,
+      "genreId": 5,
+      "name": "Local Music Artists",
+      "desc": "Dedicated to showcasing the musicians from the local music scene, fostering support and recognition within the community.",
+      "count": 0,
+      "icon": "fa-solid fa-guitar"
+    },
+    {
+      "id": 20,
+      "genreId": 5,
+      "name": "New Releases and Promotions",
+      "desc": "A forum highlighting the latest music releases, promotional activities from the local talents.",
+      "count": 0,
+      "icon": "fa-solid fa-bomb"
     }
   ],
   "topics": [
     {
-      "id": 1,
-      "title": "The first topic in Metal Discussion",
+      "title": "Example Topic",
       "forumId": 1,
-      "timestamp": 1702868275000,
-      "userId": 1,
-      "count": 6
-    },
-    {
-      "id": 2,
-      "title": "Anoter topic in Metal Discussion. Check Folk next!",
-      "forumId": 1,
-      "userId": 1,
       "count": 2,
-      "timestamp": 1702775975000
+      "timestamp": 1703109171000,
+      "updateName": "Some Other User",
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "This topic is in Folk Discussion",
-      "forumId": 4,
-      "userId": 1,
-      "timestamp": 1702775975000,
-      "count": 3
-    },
-    {
-      "title": "Wow it's a new Punk topic",
-      "forumId": 3,
-      "count": 1,
-
-      "timestamp": 1702775975000,
-      "id": 4
-    },
-    {
-      "title": "A second punk topic?",
-      "forumId": 3,
-      "count": 2,
-      "timestamp": 1702775975000,
-      "id": 5
-    },
-    {
-      "title": "The newest topic",
+      "title": "Another Example Topic",
       "forumId": 1,
       "count": 1,
-      "timestamp": 1702776085000,
-      "id": 6
-    },
-    {
-      "title": "What is rock climbing?",
-      "forumId": 6,
-      "count": 2,
-      "timestamp": 1702780312000,
-      "id": 7
+      "updateName": "Some Other User",
+      "timestamp": 1703109118000,
+      "id": 2
     }
   ],
   "comments": [
     {
-      "id": 1,
       "topicId": 1,
-      "text": "This is a comment in the first Metal Discussion topic.",
-      "userId": 1,
-      "likes": 8
-    },
-    {
-      "id": 2,
-      "topicId": 1,
-      "text": "This is an enthusiastic response!",
-      "userId": 2,
-      "likes": 0
-    },
-    {
-      "topicId": 1,
-      "text": "A third comment",
-      "id": 3,
-      "userId": 1,
-      "likes": 1
-    },
-    {
-      "topicId": 2,
-      "userId": 1,
-      "text": "First comment but in anoter [sic] topic.",
-      "id": 4
-    },
-    {
-      "topicId": 3,
-      "text": "Here's some words",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "topicId": 3,
-      "text": "Some more words for good measure",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "topicId": 3,
-      "text": "A third one",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "topicId": 4,
-      "text": "Look at that!",
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "topicId": 5,
-      "text": "Yup something like that",
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "topicId": 5,
-      "text": "(Second attempt but here goes!)",
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "topicId": 2,
-      "text": "Update the timestamp!",
-      "timestamp": 1702775975000,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "topicId": 6,
-      "text": "Whatatat",
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "topicId": 1,
-      "text": "A fourth comment in here",
-      "timestamp": 1702777320,
-      "userId": 1,
-      "id": 13,
-      "likes": 0
-    },
-    {
-      "topicId": 1,
-      "text": "The fifth comment!",
-      "timestamp": 1702777389000,
-      "userId": 1,
-      "id": 14,
-      "likes": -1
-    },
-    {
-      "topicId": 7,
-      "userId": 1,
-      "text": "Rock climbing is a physically and mentally demanding sport that involves ascending natural rock formations or artificial climbing walls. Climbers use their hands and feet to ascend vertical or nearly vertical surfaces. The goal is to reach the summit or endpoint of a predetermined route. Rock climbing can be pursued for various reasons, including recreation, fitness, competition, or as a part of mountaineering.",
-      "id": 15
-    },
-    {
-      "topicId": 7,
-      "text": "Rock climbing requires a combination of strength, flexibility, balance, and problem-solving skills. It can be enjoyed by people of various ages and skill levels, from beginners at indoor climbing gyms to experienced climbers tackling challenging outdoor routes. Safety is a paramount concern, and climbers often use harnesses, helmets, and other protective gear to minimize the risk of injury.",
-      "timestamp": 1702780312000,
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "topicId": 1,
-      "text": "This is a comment that I like",
-      "timestamp": 1702868275000,
-      "userId": 1,
+      "text": "This is an example of a user-created topic.",
+      "timestamp": 1703099645000,
       "likes": 1,
-      "id": 17
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "topicId": 2,
+      "text": "This is another topic with its own coments.",
+      "timestamp": 1703109118000,
+      "likes": 1,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "topicId": 1,
+      "text": "This is a comment posted in response to a topic. This will move the topic to the top of the topics list, as it is the most recent.",
+      "timestamp": 1703109171000,
+      "likes": 0,
+      "userId": 2,
+      "id": 3
     }
   ]
 }

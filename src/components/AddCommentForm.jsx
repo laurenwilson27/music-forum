@@ -16,17 +16,24 @@ const AddCommentForm = ({ onAdd }) => {
   };
 
   return (
-    <form className="add-comment" name="newCommentForm" onSubmit={onSubmit}>
-      <label htmlFor="text">Comment:</label>
-      <textarea
-        id="text"
-        type="text"
-        placeholder="Add comment here"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      ></textarea>
-      <input type="submit" value="Submit Comment"></input>
-    </form>
+    <div className="container-addcomment">
+      <form className="add-comment" name="newCommentForm" onSubmit={onSubmit}>
+        <div className="comment-box">
+          <h3 className="tableFont0 inputTitle">Add Comment</h3>
+          <textarea
+            id="text"
+            type="text"
+            className="comment-input"
+            placeholder="Write your comment here..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          ></textarea>
+          <div className="btns-containerPost">
+            <input className="comment-btn" type="submit" value="Post"></input>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 };
 

@@ -1,14 +1,9 @@
 const CommentUser = ({ name, avatar }) => {
   return (
-    <td>
-      <p>{name}</p>
-      <img
-        src={`/avatars/${avatar}`}
-        alt="User avatar"
-        width="96px"
-        height="96px"
-      />
-    </td>
+    <div className="user-content1">
+      <img src={`/avatars/${avatar}`} alt="User avatar" />
+      <div className="user-title">{name}</div>
+    </div>
   );
 };
 
