@@ -122,14 +122,6 @@ function Register() {
           </button>
         </Link>
       </div>
-      <div className="loggedInUser">
-        <img
-          src={`/avatars/${user.userAvatar}`}
-          className="headerAvatar"
-          alt="Your user avatar"
-        />
-        <h2>{user.userName}</h2>
-      </div>
     </div>
   );
 }

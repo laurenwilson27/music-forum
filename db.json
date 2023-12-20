@@ -9,6 +9,12 @@
       "id": 2,
       "name": "Some Other User",
       "avatar": "georgestreet.png"
+    },
+    {
+      "username": "GNAT",
+      "password": "passwordpassword",
+      "avatar": "doge.png",
+      "id": 3
     }
   ],
   "genres": [
