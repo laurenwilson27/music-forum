@@ -1,11 +1,22 @@
-import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const BackBtn = ({ to, label }) => {
-  return (
-    <div className="back">
-      <Link to={to}>{`< ${label}`}</Link>
-    </div>
-  );
+const BackBtn = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  if (location.pathname !== "/")
+    return (
+      <div className="breadcrumb">
+        <span
+          className="backLink"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          {"< Back"}
+        </span>
+      </div>
+    );
 };
 
 export default BackBtn;

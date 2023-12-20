@@ -17,7 +17,7 @@ const TopicList = () => {
   );
 
   // Show placeholders if loading is in progress or has failed
-  if (isLoading) return <div>Loading topic listing...</div>;
+  if (isLoading) return <></>;
   if (error)
     return (
       <div>
@@ -40,7 +40,7 @@ const TopicList = () => {
         title: title,
         forumId: Number(params.forumID),
         count: 1,
-        updateName: user.name,
+        updateName: user.userName,
         timestamp: now,
       }),
     });

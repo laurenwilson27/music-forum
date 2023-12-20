@@ -68,7 +68,7 @@ const LoginPanel = () => {
             className="headerAvatar"
             alt="Your user avatar"
           />
-          <span>{user.userName}</span>
+          <span className="tableFont1">{user.userName}</span>
           <button onClick={logout} className="btnB">
             Sign Out
           </button>

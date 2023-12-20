@@ -5,6 +5,7 @@ import TopicList from "./components/TopicList";
 import ForumList from "./components/ForumList";
 import TopicView from "./components/TopicView";
 import Register from "./components/Register";
+import BackBtn from "./components/BackBtn";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        <BackBtn />
         <main>
           {/* The main content is determined using the Router */}
           <Routes>

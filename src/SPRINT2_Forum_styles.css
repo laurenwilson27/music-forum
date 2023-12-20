@@ -736,6 +736,19 @@ table {
   border-radius: 50%;
 }
 
+.likeButton:hover {
+  cursor: pointer;
+}
+
+.backLink {
+  color: #deccff;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1000px) {
   .header {
     height: auto; /* Adjusted height for responsiveness */

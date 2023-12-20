@@ -7,7 +7,7 @@ const ForumList = () => {
   );
 
   // Show placeholders if loading is in progress or has failed
-  if (isLoading) return <div>Loading forum listing...</div>;
+  if (isLoading) return <></>;
   if (error)
     return (
       <div>
