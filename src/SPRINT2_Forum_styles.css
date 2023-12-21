@@ -610,7 +610,7 @@ body {
 }
 
 .space-between-containers {
-  height: 20px;
+  min-height: 20px;
   width: 400px;
 }
 

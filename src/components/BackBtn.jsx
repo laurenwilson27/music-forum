@@ -18,6 +18,7 @@ const BackBtn = () => {
         </span>
       </div>
     );
+  else return <div className="space-between-containers" />;
 };
 
 export default BackBtn;
