@@ -3,10 +3,7 @@ import { useRef } from "react";
 const useSmoothScroll = () => {
   const ref = useRef();
 
-  const smoothScroll = () => {
-    console.log("scroll!");
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+  const smoothScroll = () => ref.current.scrollIntoView({ behavior: "smooth" });
 
   return [ref, smoothScroll];
 };
