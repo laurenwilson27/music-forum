@@ -11,6 +11,13 @@
       "name": "Some Other User",
       "avatar": "georgestreet.png",
       "password": "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"
+    },
+    {
+      "name": "Lauren",
+      "password": "9a0a7088f9d1854dd5a71d1c625c88aaaef21bd3",
+      "avatar": "treble.png",
+      "email": "lauren.wilson@doesnotexist.com",
+      "id": 3
     }
   ],
   "genres": [
@@ -74,8 +81,9 @@
       "genreId": 2,
       "name": "Rock Discussion",
       "desc": "A space for open conversations covering various topics related to music, providing a platform for sharing opinions, ideas, and experiences within the community.",
-      "count": 0,
-      "icon": "fa-brands fa-microblog"
+      "count": 1,
+      "icon": "fa-brands fa-microblog",
+      "timestamp": 1703122707000
     },
     {
       "id": 6,
@@ -214,6 +222,14 @@
       "updateName": "Some Other User",
       "timestamp": 1703109118000,
       "id": 2
+    },
+    {
+      "title": "What is rock climbing?",
+      "forumId": 5,
+      "count": 2,
+      "updateName": "Lauren",
+      "timestamp": 1703122718000,
+      "id": 3
     }
   ],
   "comments": [
@@ -240,6 +256,22 @@
       "likes": 0,
       "userId": 2,
       "id": 3
+    },
+    {
+      "topicId": 3,
+      "text": "Rock climbing is a physically and mentally demanding sport that involves ascending natural rock formations or artificial climbing walls. Climbers use their hands and feet to ascend vertical or nearly vertical surfaces. The goal is to reach the summit or endpoint of a predetermined route. Rock climbing can be pursued for various reasons, including recreation, fitness, competition, or as a part of mountaineering.",
+      "timestamp": 1703122707000,
+      "likes": 1,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "topicId": 3,
+      "text": "Rock climbing requires a combination of strength, flexibility, balance, and problem-solving skills. It can be enjoyed by people of various ages and skill levels, from beginners at indoor climbing gyms to experienced climbers tackling challenging outdoor routes. Safety is a paramount concern, and climbers often use harnesses, helmets, and other protective gear to minimize the risk of injury.",
+      "timestamp": 1703122718000,
+      "likes": 1,
+      "userId": 3,
+      "id": 5
     }
   ]
 }

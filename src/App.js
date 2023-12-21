@@ -6,26 +6,33 @@ import ForumList from "./components/ForumList";
 import TopicView from "./components/TopicView";
 import Register from "./components/Register";
 import BackBtn from "./components/BackBtn";
+import Footer from "./components/Footer";
 
+import useSmoothScroll from "./hooks/useSmoothScroll.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [refTop, smoothScroll] = useSmoothScroll();
+
   return (
-    <Router>
-      <div className="App">
+    <div className="App" ref={refTop}>
+      <Router>
         <Header />
-        <BackBtn />
-        <main>
-          {/* The main content is determined using the Router */}
-          <Routes>
-            <Route path="/register" element={<Register />} />
-            <Route path="/forum/:forumID" element={<TopicList />} />
-            <Route path="/topic/:topicID" element={<TopicView />} />
-            <Route path="/" element={<ForumList />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+        <div className="mainContainer">
+          <BackBtn />
+          <main>
+            {/* The main content is determined using the Router */}
+            <Routes>
+              <Route path="/register" element={<Register />} />
+              <Route path="/forum/:forumID" element={<TopicList />} />
+              <Route path="/topic/:topicID" element={<TopicView />} />
+              <Route path="/" element={<ForumList />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer onClick={smoothScroll} />
+      </Router>
+    </div>
   );
 }
 
