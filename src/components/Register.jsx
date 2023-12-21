@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useUser from "../hooks/useUser";
 import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ import CryptoJS from "crypto-js";
 
 function Register() {
   const navigate = useNavigate();
-  const [user, setUser] = useUser();
+  const [, setUser] = useUser();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,9 +18,9 @@ function Register() {
   const [error, setError] = useState(undefined);
 
   // Leave the page if the user is logged in already
-  useEffect(() => {
-    if (user.loggedIn === true) navigate("/");
-  }, [user]);
+  // useEffect(() => {
+  //   if (user.loggedIn === true) navigate("/");
+  // }, [username]);
 
   // useEffect(() => {
   //   if (user.loggedIn) {
