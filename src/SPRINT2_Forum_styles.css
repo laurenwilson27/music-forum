@@ -483,10 +483,8 @@ h1 {
   backdrop-filter: blur(5px);
   color: rgb(255, 255, 255);
 }
-
-.container input[type="text"],
-.container input[type="password"] {
-  width: calc(100% - 20px);
+.regInput {
+  width: calc(100% - 100px);
   /* Adjust the width here */
   padding: 10px;
   margin: 5px 0 10px 0;
@@ -749,6 +747,34 @@ table {
   cursor: pointer;
 }
 
+.avatarForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarForm select,
+.avatarForm img {
+  margin-bottom: 12px;
+}
+
+.pretendLink {
+  color: #44f;
+}
+
+.pretendLink {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.registerError {
+  width: 100%;
+  color: white;
+  background-color: #b00;
+  padding: 2px 8px;
+  text-align: center;
+}
 @media screen and (max-width: 1000px) {
   .header {
     height: auto; /* Adjusted height for responsiveness */

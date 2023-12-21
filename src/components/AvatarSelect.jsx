@@ -1,17 +1,9 @@
-import { useState } from "react";
-
-const AvatarSelect = () => {
-  const [avatar, setAvatar] = useState("");
+const AvatarSelect = ({ avatar, setAvatar }) => {
   return (
-    <form className="add-comment">
-      {avatar !== "" && (
-        <img
-          src={`avatars/${avatar}`}
-          alt="User avatar"
-          width="128px"
-          height="128px"
-        />
-      )}
+    <div className="avatarForm">
+      <label htmlFor="avatarSelect">
+        <b>Avatar</b>
+      </label>
       <select
         id="avatarSelect"
         title="Avatar Selection"
@@ -20,7 +12,9 @@ const AvatarSelect = () => {
           setAvatar(e.target.value);
         }}
       >
-        <option value="">Select an avatar!</option>
+        <option value="" disabled>
+          Select Avatar
+        </option>
         <option value="acoustic.png">Acoustic</option>
         <option value="georgestreet.png">George Street Festival</option>
         <option value="metal.png">Metal Concert</option>
@@ -31,7 +25,15 @@ const AvatarSelect = () => {
         <option value="doge.png">Doge</option>
         <option value="treble.png">Treble Clef</option>
       </select>
-    </form>
+      {avatar !== "" && (
+        <img
+          src={`avatars/${avatar}`}
+          alt="User avatar"
+          width="128px"
+          height="128px"
+        />
+      )}
+    </div>
   );
 };
 
