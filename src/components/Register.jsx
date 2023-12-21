@@ -158,7 +158,7 @@ function Register() {
               onChange={(e) => setPassword2(e.target.value)}
             />
             <AvatarSelect avatar={avatar} setAvatar={setAvatar} />
-            {error && <div class="registerError">{error}</div>}
+            {error && <div className="registerError">{error}</div>}
             <p>
               By creating an account you agree to our{" "}
               <span className="pretendLink">
