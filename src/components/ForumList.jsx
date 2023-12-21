@@ -22,42 +22,44 @@ const ForumList = () => {
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <td>Forum</td>
-            <td>Topics</td>
-          </tr>
-        </thead>
-        <tbody>
-          {/* The API data contains a list of genres to iterate through */}
-          {data.map((genre) => {
-            return (
-              <Fragment key={genre.id}>
-                <tr>
-                  <td colSpan="3">Genre: {genre.name}</td>
-                </tr>
-                {/* Each genre also contains a list of forums to list within that genre */}
-                {genre.forums.map((forum) => {
-                  return (
-                    <tr key={forum.id}>
-                      <td>
-                        <Link to={`forum/${forum.id}`} key={forum.id}>
-                          {forum.name}
-                          <br />
-                          {forum.desc}
-                          <br />
-                        </Link>
-                      </td>
-                      <td>{forum.count}</td>
-                    </tr>
-                  );
-                })}
-              </Fragment>
-            );
-          })}
-        </tbody>
-      </table>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <td>Forum</td>
+              <td>Topics</td>
+            </tr>
+          </thead>
+          <tbody>
+            {/* The API data contains a list of genres to iterate through */}
+            {data.map((genre) => {
+              return (
+                <Fragment key={genre.id}>
+                  <tr>
+                    <td colSpan="3">Genre: {genre.name}</td>
+                  </tr>
+                  {/* Each genre also contains a list of forums to list within that genre */}
+                  {genre.forums.map((forum) => {
+                    return (
+                      <tr key={forum.id}>
+                        <td>
+                          <Link to={`forum/${forum.id}`} key={forum.id}>
+                            {forum.name}
+                            <br />
+                            {forum.desc}
+                            <br />
+                          </Link>
+                        </td>
+                        <td>{forum.count}</td>
+                      </tr>
+                    );
+                  })}
+                </Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
