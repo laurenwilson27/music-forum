@@ -3,11 +3,13 @@ import CommentLikes from "./CommentLikes";
 import CommentUser from "./CommentUser";
 
 import useGet from "../hooks/useGet";
+import useUser from "../hooks/useUser";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-// Using tbe moment.js package
+// Using tbe moment.js package - outdated, but simple
 import moment from "moment";
+
 const TopicView = () => {
   // The Router in App.js passes a topicID parameter based on the page URL
   // The topicID parameter is used to apply a filter to the json-server request
@@ -17,9 +19,10 @@ const TopicView = () => {
     `http://localhost:7000/topics/${params.topicID}?_embed=comments`
   );
   const [users, setUsers] = useState({});
+  const [user] = useUser();
 
   // Show placeholders if loading is in progress or has failed
-  if (isLoading) return <div>Loading comments...</div>;
+  if (isLoading) return <></>;
   if (error)
     return (
       <div>
@@ -66,14 +69,19 @@ const TopicView = () => {
         text: comment,
         timestamp: now,
         likes: 1,
+        userId: user.userId,
       }),
     });
 
-    // Additionally, use PATCH to update the 'count' value for the topic
+    // Additionally, use PATCH to update the 'count', 'updateName', and 'timestamp' values for the topic
     await fetch(`http://localhost:7000/topics/${params.topicID}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify({ count: data.count + 1, timestamp: now }),
+      body: JSON.stringify({
+        count: data.count + 1,
+        updateName: user.userName,
+        timestamp: now,
+      }),
     });
 
     //The response is the new comment, append it to the existing comments and update comment count
@@ -95,28 +103,57 @@ const TopicView = () => {
   };
 
   return (
-    <div>
-      Comments in: {data.title}
+    <div className="container threadcontainer">
       <table>
+        <thead>
+          <tr className="header-row">
+            <td className="title-cell" colSpan="1">
+              <span className="tableFont1">User Info</span>
+            </td>
+            <td className="title-cell" colSpan="2">
+              <span className="tableFont1">{data.title}</span>
+            </td>
+            <td className="title-cell" colSpan="1">
+              <div className="tableFont1">Post Date</div>
+            </td>
+            <td className="title-cell" colSpan="1">
+              <span className="tableFont1">Likes</span>
+            </td>
+          </tr>
+        </thead>
         <tbody>
           {data.comments.map((comment) => {
             return (
-              <tr className="comment" key={comment.id}>
-                {comment.userId in users && (
-                  <CommentUser
-                    name={users[comment.userId].name}
-                    avatar={users[comment.userId].avatar}
-                  />
-                )}
-                <td>{comment.text}</td>
+              <tr key={comment.id}>
+                <td colSpan="1">
+                  {comment.userId in users && (
+                    <CommentUser
+                      name={users[comment.userId].name}
+                      avatar={users[comment.userId].avatar}
+                    />
+                  )}
+                </td>
+                <td
+                  className="comment-td"
+                  colSpan="2"
+                  style={{ textAlign: "left" }}
+                >
+                  <span className="tableFont3 user-comment1">
+                    {comment.text}
+                  </span>
+                </td>
+                <td colSpan="1" width="120px">
+                  {moment(comment.timestamp).format("MMM Do YYYY [@] hh:mm a")}
+                </td>
                 <CommentLikes comment={comment} />
               </tr>
             );
           })}
         </tbody>
       </table>
+      <div className="space-between-containers" />
       {/* New Comments section */}
-      <AddCommentForm onAdd={addComment} />
+      {user.loggedIn && <AddCommentForm onAdd={addComment} />}
     </div>
   );
 };

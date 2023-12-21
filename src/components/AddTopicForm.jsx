@@ -23,25 +23,33 @@ const AddTopicForm = ({ onAdd }) => {
   };
 
   return (
-    <form className="add-comment" onSubmit={onSubmit}>
-      <label htmlFor="title">Title:</label>
-      <input
-        id="title"
-        type="text"
-        placeholder="Enter topic title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <label htmlFor="text">Description:</label>
-      <textarea
-        id="text"
-        type="text"
-        placeholder="Enter topic description"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      ></textarea>
-      <input type="submit" value="Create Topic"></input>
-    </form>
+    <div className="container-addcomment">
+      <form className="add-comment" onSubmit={onSubmit}>
+        <div className="comment-box">
+          <h3 className="tableFont0 inputTitle">Add New Topic</h3>
+          <input
+            className="title-input"
+            id="title"
+            type="text"
+            placeholder="Enter topic title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <h3 className="tableFont0 inputTitle">Comment</h3>
+          <textarea
+            className="comment-input"
+            id="text"
+            type="text"
+            placeholder="Enter topic description"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          ></textarea>
+          <div className="btns-containerPost">
+            <input className="comment-btn" type="submit" value="Post"></input>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 };
 

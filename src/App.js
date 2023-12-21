@@ -1,20 +1,24 @@
-import "./App.css";
+import "./SPRINT2_Forum_styles.css";
 
 import Header from "./components/Header";
 import TopicList from "./components/TopicList";
 import ForumList from "./components/ForumList";
 import TopicView from "./components/TopicView";
 import Register from "./components/Register";
+import BackBtn from "./components/BackBtn";
+import Footer from "./components/Footer";
 
-import AvatarSelect from "./components/AvatarSelect";
-
+import useSmoothScroll from "./hooks/useSmoothScroll.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [refTop, smoothScroll] = useSmoothScroll();
+
   return (
-    <Router>
-      <div className="App">
+    <div className="App" ref={refTop}>
+      <Router>
         <Header />
+        <BackBtn />
         <main>
           {/* The main content is determined using the Router */}
           <Routes>
@@ -24,8 +28,9 @@ function App() {
             <Route path="/" element={<ForumList />} />
           </Routes>
         </main>
-      </div>
-    </Router>
+        <Footer onClick={smoothScroll} />
+      </Router>
+    </div>
   );
 }
 

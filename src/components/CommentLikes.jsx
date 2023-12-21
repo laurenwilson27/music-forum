@@ -54,20 +54,21 @@ const CommentLikes = ({ comment }) => {
 
   return (
     <td>
-      <p>Likes: {count}</p>
-      <button
-        style={{ backgroundColor: "rgb(26, 36, 47)" }}
+      <span className="tableFont1 likeCount">{count}</span>
+      <br />
+      <span
+        className="likeButton"
         onClick={() => {
           status === false ? increment() : decrement();
         }}
         title={status === false ? "Like" : "Dislike"}
       >
         {status === false ? (
-          <FaRegThumbsUp />
+          <FaRegThumbsUp style={{ color: "#deccff" }} />
         ) : (
           <FaThumbsUp style={{ color: "#4f4" }} />
         )}
-      </button>
+      </span>
     </td>
   );
 };

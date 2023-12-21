@@ -1,11 +1,13 @@
 import AddTopicForm from "./AddTopicForm";
 
 import useGet from "../hooks/useGet";
+import useUser from "../hooks/useUser";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import moment from "moment";
 
 const TopicList = () => {
   const navigate = useNavigate();
+  const [user] = useUser();
 
   // The Router in App.js passes a forumID parameter based on the page URL
   // The forumID parameter is used to apply a filter to the json-server request
@@ -15,7 +17,7 @@ const TopicList = () => {
   );
 
   // Show placeholders if loading is in progress or has failed
-  if (isLoading) return <div>Loading topic listing...</div>;
+  if (isLoading) return <></>;
   if (error)
     return (
       <div>
@@ -38,6 +40,7 @@ const TopicList = () => {
         title: title,
         forumId: Number(params.forumID),
         count: 1,
+        updateName: user.userName,
         timestamp: now,
       }),
     });
@@ -61,6 +64,7 @@ const TopicList = () => {
         text: comment,
         timestamp: now,
         likes: 1,
+        userId: user.userId,
       }),
     });
 
@@ -92,34 +96,77 @@ const TopicList = () => {
   };
 
   return (
-    <div>
-      List of topics for {data.name}
+    <div className="container threadcontainer">
       <table>
         <thead>
-          <tr>
-            <td>Title</td>
-            <td>Comments</td>
-            <td>Last Update</td>
+          <tr className="header-row">
+            <th className="title-cell-title" colSpan="2">
+              <span className="tableFont0">{data.name}</span>
+            </th>
+            <th className="title-cell" colSpan="1" width="100">
+              <span className="tableFont1">
+                # of
+                <br />
+                Posts
+              </span>
+            </th>
+            <th className="title-cell" colSpan="1" width="240">
+              <span className="tableFont1">Last Update</span>
+            </th>
           </tr>
         </thead>
         <tbody>
           {/* Data returned by the API is sorted by ID, sort topics by timestamp instead */}
-          {data.topics.sort(timeSort).map((topic) => {
-            return (
-              <tr key={topic.id}>
-                <td>
-                  <Link to={`/topic/${topic.id}`}>{topic.title}</Link>
-                </td>
-                <td>{topic.count}</td>
-                <td>
-                  {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
-                </td>
-              </tr>
-            );
-          })}
+          {data.topics.length > 0 ? (
+            data.topics.sort(timeSort).map((topic) => {
+              return (
+                <tr key={topic.id}>
+                  <td
+                    colSpan="2"
+                    style={{
+                      textAlign: "left",
+                    }}
+                  >
+                    <span className="tableIcon1">
+                      <i
+                        className="fa-solid fa-crow"
+                        style={{ color: "#deccff" }}
+                      />
+                    </span>
+                    <Link
+                      className="tableFont2 TopicBtn boardBtn"
+                      style={{ verticalAlign: "middle" }}
+                      to={`/topic/${topic.id}`}
+                    >
+                      {topic.title}
+                    </Link>
+                  </td>
+                  <td colSpan="1" width="100">
+                    <span className="tableFont2">Posts</span>
+                    <br />
+                    {topic.count}
+                  </td>
+                  <td colSpan="1" width="240">
+                    <span className="tableFont2">By: {topic.updateName}</span>
+                    <br />
+                    {moment(topic.timestamp).format("MMM Do YYYY [@] hh:mm a")}
+                  </td>
+                </tr>
+              );
+            })
+          ) : (
+            <tr>
+              <td colSpan="4">
+                <span className="tableFont2 TopicBtn boardBtn">
+                  There are no topics in this forum. Consider creating one!
+                </span>
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
-      <AddTopicForm onAdd={addTopic} />
+      <div className="space-between-containers" />
+      {user.loggedIn && <AddTopicForm onAdd={addTopic} />}
     </div>
   );
 };
