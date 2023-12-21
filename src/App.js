@@ -18,18 +18,16 @@ function App() {
     <div className="App" ref={refTop}>
       <Router>
         <Header />
-        <div className="mainContainer">
-          <BackBtn />
-          <main>
-            {/* The main content is determined using the Router */}
-            <Routes>
-              <Route path="/register" element={<Register />} />
-              <Route path="/forum/:forumID" element={<TopicList />} />
-              <Route path="/topic/:topicID" element={<TopicView />} />
-              <Route path="/" element={<ForumList />} />
-            </Routes>
-          </main>
-        </div>
+        <BackBtn />
+        <main>
+          {/* The main content is determined using the Router */}
+          <Routes>
+            <Route path="/register" element={<Register />} />
+            <Route path="/forum/:forumID" element={<TopicList />} />
+            <Route path="/topic/:topicID" element={<TopicView />} />
+            <Route path="/" element={<ForumList />} />
+          </Routes>
+        </main>
         <Footer onClick={smoothScroll} />
       </Router>
     </div>

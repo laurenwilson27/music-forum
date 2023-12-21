@@ -13,10 +13,6 @@ html {
   flex-basis: 0;
 }
 
-.mainContainer {
-  flex: 1;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 
 @font-face {
@@ -406,6 +402,7 @@ tr:nth-child(odd) {
   height: 60px;
   padding: 10px;
   transform: translateY(-0px);
+  transform: translateX(-10px);
 }
 
 .footercontentA,
@@ -494,6 +491,11 @@ h1 {
   backdrop-filter: blur(5px);
   color: rgb(255, 255, 255);
 }
+
+.table-container {
+  margin-bottom: 110px;
+}
+
 .regInput {
   width: calc(100% - 100px);
   /* Adjust the width here */

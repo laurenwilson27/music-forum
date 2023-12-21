@@ -19,7 +19,7 @@ const ForumList = () => {
 
   return (
     <div className="container">
-      <div className="tablecontainer">
+      <div className="table-container">
         {/* The API data contains a list of genres to iterate through */}
         {data.map((genre) => {
           return (
